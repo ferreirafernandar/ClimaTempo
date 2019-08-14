@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:cv="clr-namespace:CardView;assembly=CardView"
+             x:Class="ClimaTempo.Views.ConfiguracoesPage"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Nome}" FontSize="Large"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Temperatura atual: " FontSize="Large"/>
+                        <Span Text="{Binding ClimaAtual.Principal.Temperatura}" FontSize="Medium"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Temperatura mínima: " FontSize="Large"/>
+                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMinima}" FontSize="Medium"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Velocidade do vento: " FontSize="Large"/>
+                        <Span Text="{Binding ClimaAtual.Vento.Velocidade}" FontSize="Medium"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Céu: " FontSize="Large"/>
+                        <Span Text="{Binding ClimaAtual.Clima[0].Descricao}" FontSize="Medium"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+                            
+        </StackLayout>
+
+        <!--<StackLayout Padding="8,8,8,8" Orientation="Vertical">
+            <cv:CardView>
+                <cv:CardView.CardViewContent>
+                    <StackLayout>
+                        <Label Text="{Binding ClimaAtual.Clima.Descricao}"></Label>
+                        <Image Source="{Binding ClimaAtual.Clima.Icone}"></Image>
+                    </StackLayout>
+                </cv:CardView.CardViewContent>
+            </cv:CardView>
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>
