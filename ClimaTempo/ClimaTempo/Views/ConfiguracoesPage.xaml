@@ -9,55 +9,120 @@
              Title="{Binding Title}">
 
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Nome}" FontSize="Large"/>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Temperatura atual: " FontSize="Large"/>
-                        <Span Text="{Binding ClimaAtual.Principal.Temperatura}" FontSize="Medium"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Temperatura mínima: " FontSize="Large"/>
-                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMinima}" FontSize="Medium"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Velocidade do vento: " FontSize="Large"/>
-                        <Span Text="{Binding ClimaAtual.Vento.Velocidade}" FontSize="Medium"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Céu: " FontSize="Large"/>
-                        <Span Text="{Binding ClimaAtual.Clima[0].Descricao}" FontSize="Medium"/>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-                            
-        </StackLayout>
-
-        <!--<StackLayout Padding="8,8,8,8" Orientation="Vertical">
-            <cv:CardView>
+        <StackLayout 
+            Padding="20" 
+            Orientation="Vertical">
+            <cv:CardView
+                BackgroundColor="White"
+                CardViewHasShadow="True"
+                HeightRequest="220">
                 <cv:CardView.CardViewContent>
-                    <StackLayout>
-                        <Label Text="{Binding ClimaAtual.Clima.Descricao}"></Label>
-                        <Image Source="{Binding ClimaAtual.Clima.Icone}"></Image>
+                    <StackLayout
+                        Padding="10"
+                        HorizontalOptions="Center"
+                        Spacing="10"
+                        VerticalOptions="Center">
+                        <Image 
+                            HeightRequest="96" 
+                            Source="mostlycloudy.gif" />
+                        <BoxView
+                            HeightRequest="1"
+                            WidthRequest="275"
+                            Color="LightGray" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="15,0,0,0"
+                                FontSize="Large"
+                                Text="{Binding ClimaAtual.Nome}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Margin="15,0,0,0"
+                                FontSize="Small"
+                                Text="{Binding ClimaAtual.Clima[0].Descricao}" />
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="0,0,15,0"
+                                FontSize="Medium"
+                                Text="{Binding ClimaAtual.Principal.Temperatura}"  
+                                HorizontalTextAlignment="End"/>
+                            <Label 
+                                Grid.Row="1"  
+                                Grid.Column="1"  
+                                Margin="0,0,15,0"  
+                                HorizontalTextAlignment="End">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMinima}" FontSize="Small"/>
+                                        <Span Text="/" FontSize="Medium"/>
+                                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMaxima}" FontSize="Small"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
                     </StackLayout>
                 </cv:CardView.CardViewContent>
             </cv:CardView>
-        </StackLayout>-->
+
+            <Grid Margin="0, 15, 0, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Text="Deseja receber notificações de Chuva?"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+                <Switch 
+                    IsToggled="{Binding Chuva}"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="End"/>
+
+                <Label 
+                    Text="Deseja receber notificações de Temperatura mínima?"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+                <Switch 
+                    IsToggled="{Binding TemperaturaMinina}"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalOptions="End"/>
+
+                <Label 
+                    Text="Deseja recebe notificações de Velocidade mínima do vento?"
+                    Grid.Row="2"
+                    Grid.Column="0"/>
+                <Switch 
+                    IsToggled="{Binding VentoMinino}"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalOptions="End"/>
+            </Grid>
+
+            <Button 
+                Text="Salvar" 
+                Command="{Binding SalvarConfiguracoesCommand}"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="EndAndExpand"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -5,60 +5,71 @@
              x:Class="ClimaTempo.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="30,0,30,0">
-        <Label Text="Selecione abaixo um país, um estado e uma cidade" 
-               VerticalOptions="CenterAndExpand" 
-               HorizontalTextAlignment="Center" 
-               FontSize="Medium"/>
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Image 
+                HeightRequest="196" 
+                Source="climatempo.png" />
 
-        <Picker
-            Title="País"
-            HeightRequest="56"
-            ItemsSource="{Binding Paises}"
-            WidthRequest="218"
-            SelectedItem="{Binding PaisSelecionado}"
-            ItemDisplayBinding="{Binding NomePais}">
-            <Picker.Behaviors>
-                <behaviors:EventToCommandBehavior
+            <Label 
+                Text="Selecione abaixo um país, um estado e uma cidade" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Center" 
+                FontSize="Medium"/>
+
+            <Picker
+                Title="País"
+                HeightRequest="56"
+                ItemsSource="{Binding Paises}"
+                WidthRequest="218"
+                SelectedItem="{Binding PaisSelecionado}"
+                ItemDisplayBinding="{Binding NomePais}"
+                FontSize="Small">
+                <Picker.Behaviors>
+                    <behaviors:EventToCommandBehavior
                     Command="{Binding AtualizarListaEstadosCommand}"
                     CommandParameter="{Binding PaisSelecionado}"
                     EventName="SelectedIndexChanged" />
-            </Picker.Behaviors>
-        </Picker>
+                </Picker.Behaviors>
+            </Picker>
 
-        <Picker
-            Title="Estado"
-            HeightRequest="56"
-            ItemsSource="{Binding Estados}"
-            WidthRequest="218"
-            SelectedItem="{Binding EstadoSelecionado}"
-            ItemDisplayBinding="{Binding NomeEstado}">
-            <Picker.Behaviors>
-                <behaviors:EventToCommandBehavior
+            <Picker
+                Title="Estado"
+                HeightRequest="56"
+                ItemsSource="{Binding Estados}"
+                WidthRequest="218"
+                SelectedItem="{Binding EstadoSelecionado}"
+                ItemDisplayBinding="{Binding NomeEstado}"
+                FontSize="Small">
+                <Picker.Behaviors>
+                    <behaviors:EventToCommandBehavior
                     Command="{Binding AtualizarListaCidadesCommand}"
                     CommandParameter="{Binding EstadoSelecionado}"
                     EventName="SelectedIndexChanged" />
-            </Picker.Behaviors>
-        </Picker>
+                </Picker.Behaviors>
+            </Picker>
 
-        <Picker
-            Title="Cidade"
-            HeightRequest="56"
-            ItemsSource="{Binding Cidades}"
-            WidthRequest="218"
-            SelectedItem="{Binding CidadeSelecionada}"
-            ItemDisplayBinding="{Binding NomeCidade}">
-            <Picker.Behaviors>
-                <behaviors:EventToCommandBehavior
+            <Picker
+                Title="Cidade"
+                HeightRequest="56"
+                ItemsSource="{Binding Cidades}"
+                WidthRequest="218"
+                SelectedItem="{Binding CidadeSelecionada}"
+                ItemDisplayBinding="{Binding NomeCidade}"
+                FontSize="Small">
+                <Picker.Behaviors>
+                    <behaviors:EventToCommandBehavior
                     Command="{Binding ConfiguracoesCommand}"
                     CommandParameter="{Binding CidadeSelecionada}"
                     EventName="SelectedIndexChanged" />
-            </Picker.Behaviors>
-        </Picker>
+                </Picker.Behaviors>
+            </Picker>
 
-        <Button Text="Ir para configurações" 
+            <Button 
+                Text="Ir para configurações" 
                 Command="{Binding IrParaConfiguracoesCommand}"
                 HorizontalOptions="FillAndExpand" 
-                VerticalOptions="End"/>
-    </StackLayout>
+                VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

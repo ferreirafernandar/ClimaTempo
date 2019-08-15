@@ -4,8 +4,16 @@ namespace ClimaTempo.Models.OpenWeather
 {
     public class Principal
     {
+        private string _temperatura;
+        private string _temperaturaMinima;
+        private string _temperaturaMaxima;
+
         [JsonProperty("Temp")]
-        public double Temperatura { get; set; }
+        public string Temperatura
+        {
+            get => $"{_temperatura.Remove(2)}°";
+            set => _temperatura = value;
+        }
 
         [JsonProperty("Pressure")]
         public int Pressao { get; set; }
@@ -14,9 +22,17 @@ namespace ClimaTempo.Models.OpenWeather
         public int Umidade { get; set; }
 
         [JsonProperty("Temp_min")]
-        public int TemperaturaMinima { get; set; }
+        public string TemperaturaMinima
+        {
+            get => $"{_temperaturaMinima}°";
+            set => _temperaturaMinima = value;
+        }
 
         [JsonProperty("Temp_max")]
-        public int TemperaturaMaxima { get; set; }
+        public string TemperaturaMaxima
+        {
+            get => $"{_temperaturaMaxima}°";
+            set => _temperaturaMaxima = value;
+        }
     }
 }
