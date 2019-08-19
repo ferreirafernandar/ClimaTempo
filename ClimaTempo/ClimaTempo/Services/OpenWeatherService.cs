@@ -17,7 +17,7 @@ namespace ClimaTempo.Services
 
         public Task<T> ObterBaseHttpClient<T>(string endpoint, params string[] parameters)
         {
-            return _httpClient.ObterBaseHttpClient<T>(Singleton.UrlBaseOpenWeather, endpoint, parameters);
+            return _httpClient.ObterBaseHttpClient<T>(Util.UrlBaseOpenWeather, endpoint, parameters);
         }
 
         public Task<ClimaAtual> ObterClimaTempo(string cidade)
@@ -25,7 +25,7 @@ namespace ClimaTempo.Services
             if (_climaTempo != null)
                 return _climaTempo;
 
-            _climaTempo = ObterBaseHttpClient<ClimaAtual>("weather", $"q={cidade}", $"appid={Singleton.OpenWeatherKey}", "units=metric");
+            _climaTempo = ObterBaseHttpClient<ClimaAtual>("weather", $"q={cidade}", $"appid={Util.OpenWeatherKey}", "units=metric");
 
             return _climaTempo;
         }

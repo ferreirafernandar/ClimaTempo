@@ -4,6 +4,7 @@ using ClimaTempo.Models.Battuta;
 using ClimaTempo.Services.Interfaces;
 using Prism.Commands;
 using Prism.Navigation;
+using Xamarin.Forms.Internals;
 
 namespace ClimaTempo.ViewModels
 {
@@ -80,47 +81,36 @@ namespace ClimaTempo.ViewModels
             await _navigationService.NavigateAsync("ConfiguracoesPage", navigationParameters);
         }
 
+        //public string ObterNomeDispositivo()
+        //{
+        //    var dispositivoSerie =  typeof(DeviceInfo).;
+
+        //    return dispositivoSerie;
+        //}
+
         #endregion
 
-        #region Itens Selecionados
+        #region Propriedades
 
         private Pais _paisSelecionado;
         public Pais PaisSelecionado
         {
             get => _paisSelecionado;
-            set
-            {
-                if (_paisSelecionado != value)
-                {
-                    SetProperty(ref _paisSelecionado, value);
-                }
-            }
+            set => SetProperty(ref _paisSelecionado, value);
         }
 
         private Estado _estadoSelecionado;
         public Estado EstadoSelecionado
         {
             get => _estadoSelecionado;
-            set
-            {
-                if (_estadoSelecionado != value)
-                {
-                    SetProperty(ref _estadoSelecionado, value);
-                }
-            }
+            set => SetProperty(ref _estadoSelecionado, value);
         }
 
         private Cidade _cidadeSelecionada;
         public Cidade CidadeSelecionada
         {
             get => _cidadeSelecionada;
-            set
-            {
-                if (_cidadeSelecionada != value)
-                {
-                    SetProperty(ref _cidadeSelecionada, value);
-                }
-            }
+            set => SetProperty(ref _cidadeSelecionada, value);
         }
 
         #endregion
@@ -128,6 +118,7 @@ namespace ClimaTempo.ViewModels
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
             await PreencherPaises();
+            //ObterNomeDispositivo();
         }
     }
 }

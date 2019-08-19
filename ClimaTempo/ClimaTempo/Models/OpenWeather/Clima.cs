@@ -4,6 +4,7 @@ namespace ClimaTempo.Models.OpenWeather
 {
     public class Clima
     {
+        private string _icone;
         public int Id { get; set; }
 
         [JsonProperty("Main")]
@@ -13,6 +14,10 @@ namespace ClimaTempo.Models.OpenWeather
         public string Descricao { get; set; }
 
         [JsonProperty("Icon")]
-        public string Icone { get; set; }
+        public string Icone
+        {
+            get => $"icon_{_icone}.png";
+            set => _icone = value;
+        }
     }
 }

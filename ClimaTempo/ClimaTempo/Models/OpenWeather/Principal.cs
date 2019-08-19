@@ -11,7 +11,7 @@ namespace ClimaTempo.Models.OpenWeather
         [JsonProperty("Temp")]
         public string Temperatura
         {
-            get => $"{_temperatura.Remove(2)}°";
+            get => $"{_temperatura}°";
             set => _temperatura = value;
         }
 
