@@ -1,21 +1,37 @@
-﻿using ClimaTempo.Models.OpenWeather;
+﻿using ClimaTempo.Models;
+using ClimaTempo.Models.OpenWeather;
 using ClimaTempo.Services.Interfaces;
+using Prism.Commands;
 using Prism.Navigation;
 using System.Threading.Tasks;
-using Prism.Commands;
-using Xamarin.Forms.Internals;
 
 namespace ClimaTempo.ViewModels
 {
     public class ConfiguracoesPageViewModel : ViewModelBase
     {
         private readonly IOpenWeatherService _openWeatherService;
+        private readonly IFirebaseService _firebaseService;
+
+        public ConfiguracoesPageViewModel(INavigationService navigationService,
+            IOpenWeatherService openWeatherService, IFirebaseService firebaseService) : base(navigationService)
+        {
+            _openWeatherService = openWeatherService;
+            _firebaseService = firebaseService;
+
+            ClimaAtual = new ClimaAtual();
+            Notificacao = new Notificacao();
+
+            Title = "Configurações";
+
+            SalvarConfiguracoesCommand = new DelegateCommand(async () => await SalvarConfiguracoes());
+        }
 
         #region Propriedades
 
         private bool _temperaturaMinina;
         private bool _ventoMinimo;
         private bool _chuva;
+        private Notificacao _notificacaoSelecionada;
 
         public bool TemperaturaMinina
         {
@@ -35,19 +51,13 @@ namespace ClimaTempo.ViewModels
             set => SetProperty(ref _chuva, value);
         }
 
-        #endregion
-
-        public ConfiguracoesPageViewModel(INavigationService navigationService,
-            IOpenWeatherService openWeatherService) : base(navigationService)
+        public Notificacao NotificacaoSelecionada
         {
-            _openWeatherService = openWeatherService;
-
-            ClimaAtual = new ClimaAtual();
-
-            Title = "Configurações";
-
-            //SalvarConfiguracoesCommand = new DelegateCommand(async () => await SalvarDados());
+            get => _notificacaoSelecionada;
+            set => SetProperty(ref _notificacaoSelecionada, value);
         }
+
+        #endregion
 
         #region Commands
 
@@ -58,6 +68,7 @@ namespace ClimaTempo.ViewModels
         #region Observables
 
         public ClimaAtual ClimaAtual { get; set; }
+        public Notificacao Notificacao { get; set; }
 
         #endregion
 
@@ -67,25 +78,15 @@ namespace ClimaTempo.ViewModels
             RaisePropertyChanged(nameof(ClimaAtual));
         }
 
+        private async Task SalvarConfiguracoes()
+        {
+            await _firebaseService.AdicionarNotificacao(NotificacaoSelecionada);
+        }
+
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
             await ObterClimaTempo(parameters.GetValue<string>("Cidade"));
-        }
-
-        public async void SalvarDados()
-        {
-            var dispositovo = ObterNomeDispositivo();
-            var cidade = "";
-            var temperaturaMinima = "";
-            var ventoMinimo = "";
-            var chuva = true;
-        }
-
-        public string ObterNomeDispositivo()
-        {
-            var dispositivoSerie = typeof(DeviceInfo).GUID.ToString();
-
-            return null;
+            _openWeatherService.GerarIdDispositivo();
         }
     }
 }

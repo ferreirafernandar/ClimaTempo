@@ -1,9 +1,9 @@
 ﻿using ClimaTempo.Services;
 using ClimaTempo.Services.Interfaces;
-using Prism;
-using Prism.Ioc;
 using ClimaTempo.ViewModels;
 using ClimaTempo.Views;
+using Prism;
+using Prism.Ioc;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -39,6 +39,7 @@ namespace ClimaTempo
             containerRegistry.RegisterForNavigation<ConfiguracoesPage, ConfiguracoesPageViewModel>();
             containerRegistry.Register<IBattutaService, BattutaService>();
             containerRegistry.Register<IOpenWeatherService, OpenWeatherService>();
+            containerRegistry.Register<IFirebaseService, FirebaseService>();
             containerRegistry.Register<IHttpClient, HttpClient>();
         }
     }

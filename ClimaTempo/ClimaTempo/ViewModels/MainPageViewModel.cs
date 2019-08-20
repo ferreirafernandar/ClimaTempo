@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using ClimaTempo.Models.Battuta;
 using ClimaTempo.Services.Interfaces;
@@ -81,13 +82,6 @@ namespace ClimaTempo.ViewModels
             await _navigationService.NavigateAsync("ConfiguracoesPage", navigationParameters);
         }
 
-        //public string ObterNomeDispositivo()
-        //{
-        //    var dispositivoSerie =  typeof(DeviceInfo).;
-
-        //    return dispositivoSerie;
-        //}
-
         #endregion
 
         #region Propriedades
@@ -118,7 +112,6 @@ namespace ClimaTempo.ViewModels
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
             await PreencherPaises();
-            //ObterNomeDispositivo();
         }
     }
 }
