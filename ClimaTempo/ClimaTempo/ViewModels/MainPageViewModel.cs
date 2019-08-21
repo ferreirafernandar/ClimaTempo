@@ -50,6 +50,8 @@ namespace ClimaTempo.ViewModels
         {
             var paises = await _battutaService.ObterPaises();
 
+            Paises.Clear();
+
             foreach (var pais in paises)
                 Paises.Add(pais);
         }
@@ -58,6 +60,8 @@ namespace ClimaTempo.ViewModels
         {
             var estados = await _battutaService.ObterEstados(PaisSelecionado.Codigo);
 
+            Estados.Clear();
+
             foreach (var estado in estados)
                 Estados.Add(estado);
         }
@@ -65,6 +69,8 @@ namespace ClimaTempo.ViewModels
         private async Task PreencherCidades()
         {
             var cidades = await _battutaService.ObterCidades(PaisSelecionado.Codigo, EstadoSelecionado.NomeEstado);
+
+            Cidades.Clear();
 
             foreach (var cidade in cidades)
                 Cidades.Add(cidade);

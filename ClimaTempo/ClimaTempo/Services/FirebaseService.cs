@@ -10,26 +10,19 @@ namespace ClimaTempo.Services
     public class FirebaseService : IFirebaseService
     {
         private readonly FirebaseClient _firebaseClient;
-        private readonly IOpenWeatherService _openWeatherService;
 
         public FirebaseService(IOpenWeatherService openWeatherService)
         {
-            _openWeatherService = openWeatherService;
             _firebaseClient = new FirebaseClient(Configuracoes.UrlBaseFirebase);
         }
 
-        public async Task AdicionarNotificacao(Notificacao notificacao)
+        public async Task<Notificacao> AdicionarNotificacao(Notificacao notificacao)
         {
-            await _firebaseClient
+            var resultado = await _firebaseClient
                                 .Child("notificacoes")
-                                .PostAsync(new Notificacao
-                                {
-                                    IdDispositivo = _openWeatherService.ObterIdDispositivo().Result,
-                                    Cidade = "Salvador",
-                                    TemperaturaMinima = "20",
-                                    VentoMinimo = "2.5",
-                                    Chuva = false
-                                });
+                                .PostAsync(notificacao);
+
+            return resultado?.Object;
         }
     }
 }

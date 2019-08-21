@@ -11,10 +11,6 @@ namespace ClimaTempo.Services
     {
         private readonly IHttpClient _httpClient;
 
-        private static Task<IEnumerable<Pais>> _paises;
-        private static Task<IEnumerable<Estado>> _estados;
-        private static Task<IEnumerable<Cidade>> _cidades;
-
         public BattutaService(IHttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -27,32 +23,17 @@ namespace ClimaTempo.Services
 
         public  Task<IEnumerable<Pais>> ObterPaises()
         {
-            if (_paises != null)
-                return _paises;
-
-            _paises = ObterBaseHttpClient<IEnumerable<Pais>>("country/all/", $"key={Configuracoes.BattutaKey}");
-
-            return _paises;
+            return ObterBaseHttpClient<IEnumerable<Pais>>("country/all/", $"key={Configuracoes.BattutaKey}");
         }
 
         public Task<IEnumerable<Estado>> ObterEstados(string codigoPais)
         {
-            if (_estados != null)
-                return _estados;
-
-            _estados = ObterBaseHttpClient<IEnumerable<Estado>>($"region/{codigoPais}/all/", $"key={Configuracoes.BattutaKey}");
-
-            return _estados;
+            return ObterBaseHttpClient<IEnumerable<Estado>>($"region/{codigoPais}/all/", $"key={Configuracoes.BattutaKey}");
         }
 
         public Task<IEnumerable<Cidade>> ObterCidades(string codigoPais, string estado)
         {
-            if (_cidades != null)
-                return _cidades;
-
-            _cidades = ObterBaseHttpClient<IEnumerable<Cidade>>($"city/{codigoPais}/search/", $"region={estado}", $"key={Configuracoes.BattutaKey}");
-
-            return _cidades;
+            return ObterBaseHttpClient<IEnumerable<Cidade>>($"city/{codigoPais}/search/", $"region={estado}", $"key={Configuracoes.BattutaKey}");
         }
     }
 }

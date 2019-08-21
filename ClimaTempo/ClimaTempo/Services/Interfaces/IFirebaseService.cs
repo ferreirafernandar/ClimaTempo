@@ -5,6 +5,6 @@ namespace ClimaTempo.Services.Interfaces
 {
     public interface IFirebaseService
     {
-        Task AdicionarNotificacao(Notificacao notificacao);
+        Task<Notificacao> AdicionarNotificacao(Notificacao notificacao);
     }
 }

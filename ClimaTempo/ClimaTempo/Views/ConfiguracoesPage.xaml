@@ -43,8 +43,7 @@
                                 Grid.Column="0"
                                 Margin="15,0,0,0"
                                 FontSize="Large"
-                                Text="{Binding ClimaAtual.Nome}" 
-                                x:Name="NomeCidade"/>
+                                Text="{Binding ClimaAtual.Nome}"/>
                             <Label
                                 Grid.Row="1"
                                 Grid.Column="0"
@@ -104,15 +103,15 @@
                     Grid.Row="1"
                     Grid.Column="0"/>
                 <Switch 
-                    IsToggled="{Binding TemperaturaMinina}"
+                    IsToggled="{Binding TemperaturaMinima}"
                     Grid.Row="1"
                     Grid.Column="1"
                     HorizontalOptions="End"/>
                 <Entry  
                     Grid.Row="2"
                     Grid.Column="1" 
-                    IsVisible="{Binding TemperaturaMinina}" 
-                    x:Name="ValorTemperaturaMinina"/>
+                    IsVisible="{Binding TemperaturaMinima}"
+                    Text="{Binding ValorTemperaturaMinima}"/>
                 <Label 
                     Text="Deseja recebe notificações de Velocidade mínima do vento?"
                     Grid.Row="3"
@@ -126,7 +125,7 @@
                     Grid.Row="4"
                     Grid.Column="1"
                     IsVisible="{Binding VentoMinimo}"
-                    x:Name="ValorVentoMinimo"/>
+                    Text="{Binding ValorVentoMinimo}"/>
             </Grid>
 
             <Button 

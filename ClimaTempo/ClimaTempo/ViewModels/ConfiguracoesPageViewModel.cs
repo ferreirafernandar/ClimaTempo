@@ -4,6 +4,7 @@ using ClimaTempo.Services.Interfaces;
 using Prism.Commands;
 using Prism.Navigation;
 using System.Threading.Tasks;
+using Prism.Services;
 
 namespace ClimaTempo.ViewModels
 {
@@ -11,15 +12,18 @@ namespace ClimaTempo.ViewModels
     {
         private readonly IOpenWeatherService _openWeatherService;
         private readonly IFirebaseService _firebaseService;
+        private readonly IPageDialogService _pageDialogService;
 
         public ConfiguracoesPageViewModel(INavigationService navigationService,
-            IOpenWeatherService openWeatherService, IFirebaseService firebaseService) : base(navigationService)
+            IOpenWeatherService openWeatherService, 
+            IFirebaseService firebaseService, 
+            IPageDialogService pageDialogService) : base(navigationService)
         {
             _openWeatherService = openWeatherService;
             _firebaseService = firebaseService;
+            _pageDialogService = pageDialogService;
 
             ClimaAtual = new ClimaAtual();
-            Notificacao = new Notificacao();
 
             Title = "Configurações";
 
@@ -28,15 +32,16 @@ namespace ClimaTempo.ViewModels
 
         #region Propriedades
 
-        private bool _temperaturaMinina;
+        private bool _temperaturaMinima;
         private bool _ventoMinimo;
         private bool _chuva;
-        private Notificacao _notificacaoSelecionada;
+        private string _valorVentoMinimo;
+        private string _valorTemperaturaMinima;
 
-        public bool TemperaturaMinina
+        public bool TemperaturaMinima
         {
-            get => _temperaturaMinina;
-            set => SetProperty(ref _temperaturaMinina, value);
+            get => _temperaturaMinima;
+            set => SetProperty(ref _temperaturaMinima, value);
         }
 
         public bool VentoMinimo
@@ -51,10 +56,16 @@ namespace ClimaTempo.ViewModels
             set => SetProperty(ref _chuva, value);
         }
 
-        public Notificacao NotificacaoSelecionada
+        public string ValorTemperaturaMinima
         {
-            get => _notificacaoSelecionada;
-            set => SetProperty(ref _notificacaoSelecionada, value);
+            get => _valorTemperaturaMinima;
+            set => SetProperty(ref _valorTemperaturaMinima, value);
+        }
+
+        public string ValorVentoMinimo
+        {
+            get => _valorVentoMinimo;
+            set => SetProperty(ref _valorVentoMinimo, value);
         }
 
         #endregion
@@ -68,7 +79,6 @@ namespace ClimaTempo.ViewModels
         #region Observables
 
         public ClimaAtual ClimaAtual { get; set; }
-        public Notificacao Notificacao { get; set; }
 
         #endregion
 
@@ -80,7 +90,19 @@ namespace ClimaTempo.ViewModels
 
         private async Task SalvarConfiguracoes()
         {
-            await _firebaseService.AdicionarNotificacao(NotificacaoSelecionada);
+            var notificacao = new Notificacao
+            {
+                IdDispositivo = _openWeatherService.ObterIdDispositivo().Result,
+                Chuva = Chuva,
+                Cidade = ClimaAtual.Nome,
+                TemperaturaMinima = ValorTemperaturaMinima,
+                VentoMinimo = ValorVentoMinimo
+            };
+
+            var resultado = await _firebaseService.AdicionarNotificacao(notificacao);
+
+            if (resultado != null)
+                await _pageDialogService.DisplayAlertAsync("Sucesso", "Configuração salva com sucesso", "OK");
         }
 
         public override async void OnNavigatedTo(INavigationParameters parameters)
