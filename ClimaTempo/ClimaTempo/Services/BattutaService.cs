@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ClimaTempo.Models;
 using ClimaTempo.Models.Battuta;
 using ClimaTempo.Services.Interfaces;
 using ClimaTempo.Utils;

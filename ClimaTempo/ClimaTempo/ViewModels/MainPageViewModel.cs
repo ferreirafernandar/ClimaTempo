@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using ClimaTempo.Models.Battuta;
 using ClimaTempo.Services.Interfaces;
 using Prism.Commands;
 using Prism.Navigation;
-using Xamarin.Forms.Internals;
 
 namespace ClimaTempo.ViewModels
 {
