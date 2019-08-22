@@ -3,6 +3,8 @@ using ClimaTempo.Services.Interfaces;
 using ClimaTempo.Utils;
 using Firebase.Database;
 using Firebase.Database.Query;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ClimaTempo.Services
@@ -11,7 +13,7 @@ namespace ClimaTempo.Services
     {
         private readonly FirebaseClient _firebaseClient;
 
-        public FirebaseService(IOpenWeatherService openWeatherService)
+        public FirebaseService()
         {
             _firebaseClient = new FirebaseClient(Configuracoes.UrlBaseFirebase);
         }
@@ -23,6 +25,20 @@ namespace ClimaTempo.Services
                                 .PostAsync(notificacao);
 
             return resultado?.Object;
+        }
+
+        public async Task<List<Notificacao>> ObterNotificacoes()
+        {
+            return (await _firebaseClient
+                    .Child("notificacoes")
+                    .OnceAsync<Notificacao>()).Select(item => new Notificacao
+                    {
+                        Cidade = item.Object.Cidade,
+                        IdDispositivo = item.Object.IdDispositivo,
+                        TemperaturaMinima = item.Object.TemperaturaMinima,
+                        Chuva = item.Object.Chuva,
+                        VentoMinimo = item.Object.VentoMinimo
+                    }).ToList();
         }
     }
 }

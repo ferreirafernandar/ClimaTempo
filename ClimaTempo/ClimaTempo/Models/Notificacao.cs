@@ -4,8 +4,14 @@
     {
         public string IdDispositivo { get; set; }
         public string Cidade { get; set; }
-        public string TemperaturaMinima { get; set; }
-        public string VentoMinimo { get; set; }
+        public double TemperaturaMinima { get; set; }
+        public double VentoMinimo { get; set; }
         public bool Chuva { get; set; }
+
+        public bool DeveEnviarNotificacaoDeTemperatura(double temperaturaAtual)
+            => temperaturaAtual < TemperaturaMinima;
+
+        public bool DeveEnviarNotificacaoDeVento(double ventoAtual)
+            => ventoAtual < VentoMinimo;
     }
 }

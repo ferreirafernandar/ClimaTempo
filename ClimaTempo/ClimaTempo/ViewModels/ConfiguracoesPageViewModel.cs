@@ -31,38 +31,37 @@ namespace ClimaTempo.ViewModels
         }
 
         #region Propriedades
-
+       
         private bool _temperaturaMinima;
-        private bool _ventoMinimo;
-        private bool _chuva;
-        private string _valorVentoMinimo;
-        private string _valorTemperaturaMinima;
-
         public bool TemperaturaMinima
         {
             get => _temperaturaMinima;
             set => SetProperty(ref _temperaturaMinima, value);
         }
 
+        private bool _ventoMinimo;
         public bool VentoMinimo
         {
             get => _ventoMinimo;
             set => SetProperty(ref _ventoMinimo, value);
         }
 
+        private bool _chuva;
         public bool Chuva
         {
             get => _chuva;
             set => SetProperty(ref _chuva, value);
         }
 
-        public string ValorTemperaturaMinima
+        private double _valorTemperaturaMinima;
+        public double ValorTemperaturaMinima
         {
             get => _valorTemperaturaMinima;
             set => SetProperty(ref _valorTemperaturaMinima, value);
         }
 
-        public string ValorVentoMinimo
+        private double _valorVentoMinimo;
+        public double ValorVentoMinimo
         {
             get => _valorVentoMinimo;
             set => SetProperty(ref _valorVentoMinimo, value);

@@ -24,9 +24,6 @@ namespace ClimaTempo.Services
 
         public Task<ClimaAtual> ObterClimaTempo(string cidade)
         {
-            if (_climaTempo != null)
-                return _climaTempo;
-
             _climaTempo = ObterBaseHttpClient<ClimaAtual>("weather", $"q={cidade}", $"appid={Configuracoes.OpenWeatherKey}", "units=metric");
 
             return _climaTempo;
