@@ -55,7 +55,8 @@
                                 Grid.Column="1"
                                 Margin="0,0,15,0"
                                 FontSize="Medium"
-                                Text="{Binding ClimaAtual.Principal.Temperatura}"  
+                                Text="{Binding ClimaAtual.Principal.Temperatura, StringFormat='{0}°'}" 
+
                                 HorizontalTextAlignment="End"/>
                             <Label 
                                 Grid.Row="1"  
@@ -64,9 +65,9 @@
                                 HorizontalTextAlignment="End">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMinima}" FontSize="Small"/>
+                                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMinima, StringFormat='{0}°'}" FontSize="Small"/>
                                         <Span Text="/" FontSize="Medium"/>
-                                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMaxima}" FontSize="Small"/>
+                                        <Span Text="{Binding ClimaAtual.Principal.TemperaturaMaxima, StringFormat='{0}°'}" FontSize="Small"/>
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>

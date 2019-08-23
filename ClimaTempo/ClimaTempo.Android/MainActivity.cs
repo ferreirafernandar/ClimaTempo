@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Prism;
 using Prism.Ioc;
+using Android.Gms.Common;
 
 namespace ClimaTempo.Droid
 {
@@ -13,6 +14,8 @@ namespace ClimaTempo.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+
+
 
             base.OnCreate(bundle);
 

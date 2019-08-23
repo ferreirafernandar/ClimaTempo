@@ -30,13 +30,13 @@ namespace FunctionClimaTempo
             {
                var cidade = await openWeatherService.ObterClimaTempo(notificacao.Cidade);
 
-               if (notificacao.DeveEnviarNotificacaoDeTemperatura(Convert.ToDouble(cidade.Principal.TemperaturaMinima)))
+               if (notificacao.DeveNotificarTemperaturaMinima(cidade.Principal.TemperaturaMinima))
                {
                    stringBuilder.AppendLine(
                        $"Cidade {notificacao.Cidade} com temperatura atual {cidade.Principal.TemperaturaMinima} menor que {notificacao.TemperaturaMinima}");
                }
 
-               if (notificacao.DeveEnviarNotificacaoDeVento(Convert.ToDouble(cidade.Vento.Velocidade)))
+               if (notificacao.DeveNotificarVentoVelocidadeMinima(Convert.ToDouble(cidade.Vento.Velocidade)))
                {
                    stringBuilder.AppendLine(
                        $"Cidade {notificacao.Cidade} com velocidade atual do vendo {cidade.Vento.Velocidade} menor que {notificacao.VentoMinimo}");

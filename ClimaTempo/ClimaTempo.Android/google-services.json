@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "481826728023",
+    "firebase_url": "https://climatempo-cc0f8.firebaseio.com",
+    "project_id": "climatempo-cc0f8",
+    "storage_bucket": "climatempo-cc0f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481826728023:android:248548bd63149c20",
+        "android_client_info": {
+          "package_name": "com.ferreirafernandar.climatempo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481826728023-uem6mls8r1lvi3b8a47o6016bl9n2cb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr4ty2mJKx7lVV2PQqNteIKG2uVJNvYXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481826728023-uem6mls8r1lvi3b8a47o6016bl9n2cb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,10 +8,10 @@
         public double VentoMinimo { get; set; }
         public bool Chuva { get; set; }
 
-        public bool DeveEnviarNotificacaoDeTemperatura(double temperaturaAtual)
+        public bool DeveNotificarTemperaturaMinima(double temperaturaAtual)
             => temperaturaAtual < TemperaturaMinima;
 
-        public bool DeveEnviarNotificacaoDeVento(double ventoAtual)
+        public bool DeveNotificarVentoVelocidadeMinima(double ventoAtual)
             => ventoAtual < VentoMinimo;
     }
 }
