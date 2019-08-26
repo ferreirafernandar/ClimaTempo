@@ -2,7 +2,6 @@
 using ClimaTempo.Services.Interfaces;
 using ClimaTempo.Utils;
 using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace ClimaTempo.Services

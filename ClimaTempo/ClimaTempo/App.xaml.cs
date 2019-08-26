@@ -2,8 +2,6 @@
 using ClimaTempo.Services.Interfaces;
 using ClimaTempo.ViewModels;
 using ClimaTempo.Views;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Push;
 using Prism;
 using Prism.Ioc;
 using Xamarin.Forms;
