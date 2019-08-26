@@ -4,18 +4,16 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	<application android:label="ClimaTempo" android:icon="@mipmap/ic_launcher">
     <receiver
-      android:name="com.goole.firebase.iid.FrebaseInstanceIdInternalReceiver"
-      android:exported="false"
-    />
+      android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
+      android:exported="false" />
     <receiver
-      android:name="com.goole.firebase.iid.FrebaseInstanceIdReceiver"
+      android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
       android:exported="true"
       android:permission="com.google.android.c2dm.permission.SEND">
-
       <intent-filter>
-        <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
-        <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
-        <category android:name="${applicationId}"/>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="${applicationId}" />
       </intent-filter>
     </receiver>
   </application>

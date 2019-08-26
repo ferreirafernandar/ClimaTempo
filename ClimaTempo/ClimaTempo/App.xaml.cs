@@ -2,10 +2,14 @@
 using ClimaTempo.Services.Interfaces;
 using ClimaTempo.ViewModels;
 using ClimaTempo.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Push;
 using Prism;
 using Prism.Ioc;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppCenterService = ClimaTempo.Services.AppCenterService;
+using IAppCenterService = ClimaTempo.Services.Interfaces.IAppCenterService;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace ClimaTempo
@@ -29,6 +33,7 @@ namespace ClimaTempo
 #if DEBUG
             HotReloader.Current.Run(this);    
 #endif
+            
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 
@@ -40,6 +45,7 @@ namespace ClimaTempo
             containerRegistry.Register<IBattutaService, BattutaService>();
             containerRegistry.Register<IOpenWeatherService, OpenWeatherService>();
             containerRegistry.Register<IFirebaseService, FirebaseService>();
+            containerRegistry.Register<IAppCenterService, AppCenterService>();
             containerRegistry.Register<IHttpClient, HttpClient>();
         }
     }

@@ -26,6 +26,131 @@ namespace ClimaTempo.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.font = global::ClimaTempo.Droid.Resource.Attribute.font;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderAuthority = global::ClimaTempo.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderCerts = global::ClimaTempo.Droid.Resource.Attribute.fontProviderCerts;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderFetchStrategy = global::ClimaTempo.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderFetchTimeout = global::ClimaTempo.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderPackage = global::ClimaTempo.Droid.Resource.Attribute.fontProviderPackage;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderQuery = global::ClimaTempo.Droid.Resource.Attribute.fontProviderQuery;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontStyle = global::ClimaTempo.Droid.Resource.Attribute.fontStyle;
+			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontWeight = global::ClimaTempo.Droid.Resource.Attribute.fontWeight;
+			global::Microsoft.AppCenter.Push.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::ClimaTempo.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_action_color_filter = global::ClimaTempo.Droid.Resource.Color.notification_action_color_filter;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_icon_bg_color = global::ClimaTempo.Droid.Resource.Color.notification_icon_bg_color;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.notification_material_background_media_default_color = global::ClimaTempo.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.primary_text_default_material_dark = global::ClimaTempo.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.ripple_material_light = global::ClimaTempo.Droid.Resource.Color.ripple_material_light;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.secondary_text_default_material_dark = global::ClimaTempo.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Microsoft.AppCenter.Push.Android.Resource.Color.secondary_text_default_material_light = global::ClimaTempo.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::ClimaTempo.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_inset_vertical_material = global::ClimaTempo.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::ClimaTempo.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_button_padding_vertical_material = global::ClimaTempo.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.compat_control_corner_material = global::ClimaTempo.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_action_icon_size = global::ClimaTempo.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_action_text_size = global::ClimaTempo.Droid.Resource.Dimension.notification_action_text_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_big_circle_margin = global::ClimaTempo.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_content_margin_start = global::ClimaTempo.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_large_icon_height = global::ClimaTempo.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_large_icon_width = global::ClimaTempo.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_main_column_padding_top = global::ClimaTempo.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_media_narrow_margin = global::ClimaTempo.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_right_icon_size = global::ClimaTempo.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_right_side_padding_top = global::ClimaTempo.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_small_icon_background_padding = global::ClimaTempo.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_small_icon_size_as_large = global::ClimaTempo.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_subtext_size = global::ClimaTempo.Droid.Resource.Dimension.notification_subtext_size;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_top_pad = global::ClimaTempo.Droid.Resource.Dimension.notification_top_pad;
+			global::Microsoft.AppCenter.Push.Android.Resource.Dimension.notification_top_pad_large_text = global::ClimaTempo.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.ic_stat_notify_dot = global::ClimaTempo.Droid.Resource.Drawable.ic_stat_notify_dot;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_action_background = global::ClimaTempo.Droid.Resource.Drawable.notification_action_background;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg = global::ClimaTempo.Droid.Resource.Drawable.notification_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low = global::ClimaTempo.Droid.Resource.Drawable.notification_bg_low;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low_normal = global::ClimaTempo.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_low_pressed = global::ClimaTempo.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_normal = global::ClimaTempo.Droid.Resource.Drawable.notification_bg_normal;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_bg_normal_pressed = global::ClimaTempo.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_icon_background = global::ClimaTempo.Droid.Resource.Drawable.notification_icon_background;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_template_icon_bg = global::ClimaTempo.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_template_icon_low_bg = global::ClimaTempo.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notification_tile_bg = global::ClimaTempo.Droid.Resource.Drawable.notification_tile_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::ClimaTempo.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action0 = global::ClimaTempo.Droid.Resource.Id.action0;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_container = global::ClimaTempo.Droid.Resource.Id.action_container;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_divider = global::ClimaTempo.Droid.Resource.Id.action_divider;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_image = global::ClimaTempo.Droid.Resource.Id.action_image;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.action_text = global::ClimaTempo.Droid.Resource.Id.action_text;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.actions = global::ClimaTempo.Droid.Resource.Id.actions;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.async = global::ClimaTempo.Droid.Resource.Id.async;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.blocking = global::ClimaTempo.Droid.Resource.Id.blocking;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.cancel_action = global::ClimaTempo.Droid.Resource.Id.cancel_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.chronometer = global::ClimaTempo.Droid.Resource.Id.chronometer;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.end_padder = global::ClimaTempo.Droid.Resource.Id.end_padder;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.forever = global::ClimaTempo.Droid.Resource.Id.forever;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.icon = global::ClimaTempo.Droid.Resource.Id.icon;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.icon_group = global::ClimaTempo.Droid.Resource.Id.icon_group;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.info = global::ClimaTempo.Droid.Resource.Id.info;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.italic = global::ClimaTempo.Droid.Resource.Id.italic;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.line1 = global::ClimaTempo.Droid.Resource.Id.line1;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.line3 = global::ClimaTempo.Droid.Resource.Id.line3;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.media_actions = global::ClimaTempo.Droid.Resource.Id.media_actions;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.normal = global::ClimaTempo.Droid.Resource.Id.normal;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_background = global::ClimaTempo.Droid.Resource.Id.notification_background;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_main_column = global::ClimaTempo.Droid.Resource.Id.notification_main_column;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.notification_main_column_container = global::ClimaTempo.Droid.Resource.Id.notification_main_column_container;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.right_icon = global::ClimaTempo.Droid.Resource.Id.right_icon;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.right_side = global::ClimaTempo.Droid.Resource.Id.right_side;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.status_bar_latest_event_content = global::ClimaTempo.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.text = global::ClimaTempo.Droid.Resource.Id.text;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.text2 = global::ClimaTempo.Droid.Resource.Id.text2;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.time = global::ClimaTempo.Droid.Resource.Id.time;
+			global::Microsoft.AppCenter.Push.Android.Resource.Id.title = global::ClimaTempo.Droid.Resource.Id.title;
+			global::Microsoft.AppCenter.Push.Android.Resource.Integer.cancel_button_image_alpha = global::ClimaTempo.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Microsoft.AppCenter.Push.Android.Resource.Integer.google_play_services_version = global::ClimaTempo.Droid.Resource.Integer.google_play_services_version;
+			global::Microsoft.AppCenter.Push.Android.Resource.Integer.status_bar_notification_info_maxnum = global::ClimaTempo.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_action = global::ClimaTempo.Droid.Resource.Layout.notification_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_action_tombstone = global::ClimaTempo.Droid.Resource.Layout.notification_action_tombstone;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_media_action = global::ClimaTempo.Droid.Resource.Layout.notification_media_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_media_cancel_action = global::ClimaTempo.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media = global::ClimaTempo.Droid.Resource.Layout.notification_template_big_media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_custom = global::ClimaTempo.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_narrow = global::ClimaTempo.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_big_media_narrow_custom = global::ClimaTempo.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_custom_big = global::ClimaTempo.Droid.Resource.Layout.notification_template_custom_big;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_icon_group = global::ClimaTempo.Droid.Resource.Layout.notification_template_icon_group;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_lines_media = global::ClimaTempo.Droid.Resource.Layout.notification_template_lines_media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_media = global::ClimaTempo.Droid.Resource.Layout.notification_template_media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_media_custom = global::ClimaTempo.Droid.Resource.Layout.notification_template_media_custom;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_part_chronometer = global::ClimaTempo.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Microsoft.AppCenter.Push.Android.Resource.Layout.notification_template_part_time = global::ClimaTempo.Droid.Resource.Layout.notification_template_part_time;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.common_google_play_services_unknown_issue = global::ClimaTempo.Droid.Resource.String.common_google_play_services_unknown_issue;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.fcm_fallback_notification_channel_label = global::ClimaTempo.Droid.Resource.String.fcm_fallback_notification_channel_label;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.library_name = global::ClimaTempo.Droid.Resource.String.library_name;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.status_bar_notification_info_overflow = global::ClimaTempo.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::ClimaTempo.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::ClimaTempo.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Microsoft.AppCenter.Push.Android.Resource.Style.Widget_Compat_NotificationActionText = global::ClimaTempo.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily = global::ClimaTempo.Droid.Resource.Styleable.FontFamily;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::ClimaTempo.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::ClimaTempo.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::ClimaTempo.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::ClimaTempo.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::ClimaTempo.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::ClimaTempo.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont = global::ClimaTempo.Droid.Resource.Styleable.FontFamilyFont;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_font = global::ClimaTempo.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::ClimaTempo.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::ClimaTempo.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::ClimaTempo.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::ClimaTempo.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::ClimaTempo.Droid.Resource.Attribute.font;
@@ -5817,26 +5942,26 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02015d
-			public const int avd_hide_password_1 = 2130837853;
-			
 			// aapt resource value: 0x7f02015e
-			public const int avd_hide_password_2 = 2130837854;
+			public const int avd_hide_password_1 = 2130837854;
 			
 			// aapt resource value: 0x7f02015f
-			public const int avd_hide_password_3 = 2130837855;
+			public const int avd_hide_password_2 = 2130837855;
+			
+			// aapt resource value: 0x7f020160
+			public const int avd_hide_password_3 = 2130837856;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f020160
-			public const int avd_show_password_1 = 2130837856;
-			
 			// aapt resource value: 0x7f020161
-			public const int avd_show_password_2 = 2130837857;
+			public const int avd_show_password_1 = 2130837857;
 			
 			// aapt resource value: 0x7f020162
-			public const int avd_show_password_3 = 2130837858;
+			public const int avd_show_password_2 = 2130837858;
+			
+			// aapt resource value: 0x7f020163
+			public const int avd_show_password_3 = 2130837859;
 			
 			// aapt resource value: 0x7f020056
 			public const int climatempo = 2130837590;
@@ -6445,187 +6570,190 @@ namespace ClimaTempo.Droid
 			public const int ic_mtrl_chip_close_circle = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int ic_vol_type_speaker_dark = 2130837792;
+			public const int ic_stat_notify_dot = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int ic_vol_type_speaker_group_dark = 2130837793;
+			public const int ic_vol_type_speaker_dark = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int ic_vol_type_speaker_group_light = 2130837794;
+			public const int ic_vol_type_speaker_group_dark = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int ic_vol_type_speaker_light = 2130837795;
+			public const int ic_vol_type_speaker_group_light = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int ic_vol_type_tv_dark = 2130837796;
+			public const int ic_vol_type_speaker_light = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int ic_vol_type_tv_light = 2130837797;
+			public const int ic_vol_type_tv_dark = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int icon_01d = 2130837798;
+			public const int ic_vol_type_tv_light = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int icon_01n = 2130837799;
+			public const int icon_01d = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int icon_02d = 2130837800;
+			public const int icon_01n = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int icon_02n = 2130837801;
+			public const int icon_02d = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int icon_03d = 2130837802;
+			public const int icon_02n = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int icon_03n = 2130837803;
+			public const int icon_03d = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int icon_04d = 2130837804;
+			public const int icon_03n = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int icon_04n = 2130837805;
+			public const int icon_04d = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int icon_09d = 2130837806;
+			public const int icon_04n = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int icon_09n = 2130837807;
+			public const int icon_09d = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int icon_10d = 2130837808;
+			public const int icon_09n = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int icon_10n = 2130837809;
+			public const int icon_10d = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int icon_11d = 2130837810;
+			public const int icon_10n = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int icon_11n = 2130837811;
+			public const int icon_11d = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int icon_13d = 2130837812;
+			public const int icon_11n = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int icon_13n = 2130837813;
+			public const int icon_13d = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int icon_50d = 2130837814;
+			public const int icon_13n = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int icon_50n = 2130837815;
+			public const int icon_50d = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int mr_button_connected_dark = 2130837816;
+			public const int icon_50n = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int mr_button_connected_light = 2130837817;
+			public const int mr_button_connected_dark = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int mr_button_connecting_dark = 2130837818;
+			public const int mr_button_connected_light = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int mr_button_connecting_light = 2130837819;
+			public const int mr_button_connecting_dark = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int mr_button_dark = 2130837820;
+			public const int mr_button_connecting_light = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int mr_button_light = 2130837821;
+			public const int mr_button_dark = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int mr_dialog_close_dark = 2130837822;
+			public const int mr_button_light = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int mr_dialog_close_light = 2130837823;
+			public const int mr_dialog_close_dark = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int mr_dialog_material_background_dark = 2130837824;
+			public const int mr_dialog_close_light = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int mr_dialog_material_background_light = 2130837825;
+			public const int mr_dialog_material_background_dark = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int mr_group_collapse = 2130837826;
+			public const int mr_dialog_material_background_light = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int mr_group_expand = 2130837827;
+			public const int mr_group_collapse = 2130837827;
 			
 			// aapt resource value: 0x7f020144
-			public const int mr_media_pause_dark = 2130837828;
+			public const int mr_group_expand = 2130837828;
 			
 			// aapt resource value: 0x7f020145
-			public const int mr_media_pause_light = 2130837829;
+			public const int mr_media_pause_dark = 2130837829;
 			
 			// aapt resource value: 0x7f020146
-			public const int mr_media_play_dark = 2130837830;
+			public const int mr_media_pause_light = 2130837830;
 			
 			// aapt resource value: 0x7f020147
-			public const int mr_media_play_light = 2130837831;
+			public const int mr_media_play_dark = 2130837831;
 			
 			// aapt resource value: 0x7f020148
-			public const int mr_media_stop_dark = 2130837832;
+			public const int mr_media_play_light = 2130837832;
 			
 			// aapt resource value: 0x7f020149
-			public const int mr_media_stop_light = 2130837833;
+			public const int mr_media_stop_dark = 2130837833;
 			
 			// aapt resource value: 0x7f02014a
-			public const int mr_vol_type_audiotrack_dark = 2130837834;
+			public const int mr_media_stop_light = 2130837834;
 			
 			// aapt resource value: 0x7f02014b
-			public const int mr_vol_type_audiotrack_light = 2130837835;
+			public const int mr_vol_type_audiotrack_dark = 2130837835;
 			
 			// aapt resource value: 0x7f02014c
-			public const int mtrl_snackbar_background = 2130837836;
+			public const int mr_vol_type_audiotrack_light = 2130837836;
 			
 			// aapt resource value: 0x7f02014d
-			public const int mtrl_tabs_default_indicator = 2130837837;
+			public const int mtrl_snackbar_background = 2130837837;
 			
 			// aapt resource value: 0x7f02014e
-			public const int navigation_empty_icon = 2130837838;
+			public const int mtrl_tabs_default_indicator = 2130837838;
 			
 			// aapt resource value: 0x7f02014f
-			public const int notification_action_background = 2130837839;
+			public const int navigation_empty_icon = 2130837839;
 			
 			// aapt resource value: 0x7f020150
-			public const int notification_bg = 2130837840;
+			public const int notification_action_background = 2130837840;
 			
 			// aapt resource value: 0x7f020151
-			public const int notification_bg_low = 2130837841;
+			public const int notification_bg = 2130837841;
 			
 			// aapt resource value: 0x7f020152
-			public const int notification_bg_low_normal = 2130837842;
+			public const int notification_bg_low = 2130837842;
 			
 			// aapt resource value: 0x7f020153
-			public const int notification_bg_low_pressed = 2130837843;
+			public const int notification_bg_low_normal = 2130837843;
 			
 			// aapt resource value: 0x7f020154
-			public const int notification_bg_normal = 2130837844;
+			public const int notification_bg_low_pressed = 2130837844;
 			
 			// aapt resource value: 0x7f020155
-			public const int notification_bg_normal_pressed = 2130837845;
+			public const int notification_bg_normal = 2130837845;
 			
 			// aapt resource value: 0x7f020156
-			public const int notification_icon_background = 2130837846;
-			
-			// aapt resource value: 0x7f02015b
-			public const int notification_template_icon_bg = 2130837851;
-			
-			// aapt resource value: 0x7f02015c
-			public const int notification_template_icon_low_bg = 2130837852;
+			public const int notification_bg_normal_pressed = 2130837846;
 			
 			// aapt resource value: 0x7f020157
-			public const int notification_tile_bg = 2130837847;
+			public const int notification_icon_background = 2130837847;
+			
+			// aapt resource value: 0x7f02015c
+			public const int notification_template_icon_bg = 2130837852;
+			
+			// aapt resource value: 0x7f02015d
+			public const int notification_template_icon_low_bg = 2130837853;
 			
 			// aapt resource value: 0x7f020158
-			public const int notify_panel_notification_icon_bg = 2130837848;
+			public const int notification_tile_bg = 2130837848;
 			
 			// aapt resource value: 0x7f020159
-			public const int tooltip_frame_dark = 2130837849;
+			public const int notify_panel_notification_icon_bg = 2130837849;
 			
 			// aapt resource value: 0x7f02015a
-			public const int tooltip_frame_light = 2130837850;
+			public const int tooltip_frame_dark = 2130837850;
+			
+			// aapt resource value: 0x7f02015b
+			public const int tooltip_frame_light = 2130837851;
 			
 			static Drawable()
 			{
@@ -6658,8 +6786,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0046
 			public const int SYM = 2131558470;
 			
-			// aapt resource value: 0x7f0d00eb
-			public const int action0 = 2131558635;
+			// aapt resource value: 0x7f0d00ed
+			public const int action0 = 2131558637;
 			
 			// aapt resource value: 0x7f0d0094
 			public const int action_bar = 2131558548;
@@ -6682,17 +6810,17 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0070
 			public const int action_bar_title = 2131558512;
 			
-			// aapt resource value: 0x7f0d00e8
-			public const int action_container = 2131558632;
+			// aapt resource value: 0x7f0d00ea
+			public const int action_container = 2131558634;
 			
 			// aapt resource value: 0x7f0d0095
 			public const int action_context_bar = 2131558549;
 			
-			// aapt resource value: 0x7f0d00ef
-			public const int action_divider = 2131558639;
+			// aapt resource value: 0x7f0d00f1
+			public const int action_divider = 2131558641;
 			
-			// aapt resource value: 0x7f0d00e9
-			public const int action_image = 2131558633;
+			// aapt resource value: 0x7f0d00eb
+			public const int action_image = 2131558635;
 			
 			// aapt resource value: 0x7f0d0003
 			public const int action_menu_divider = 2131558403;
@@ -6709,11 +6837,11 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0072
 			public const int action_mode_close_button = 2131558514;
 			
-			// aapt resource value: 0x7f0d00ea
-			public const int action_text = 2131558634;
+			// aapt resource value: 0x7f0d00ec
+			public const int action_text = 2131558636;
 			
-			// aapt resource value: 0x7f0d00f8
-			public const int actions = 2131558648;
+			// aapt resource value: 0x7f0d00fa
+			public const int actions = 2131558650;
 			
 			// aapt resource value: 0x7f0d0073
 			public const int activity_chooser_view_content = 2131558515;
@@ -6775,8 +6903,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0079
 			public const int buttonPanel = 2131558521;
 			
-			// aapt resource value: 0x7f0d00ec
-			public const int cancel_action = 2131558636;
+			// aapt resource value: 0x7f0d00ee
+			public const int cancel_action = 2131558638;
 			
 			// aapt resource value: 0x7f0d0054
 			public const int center = 2131558484;
@@ -6790,8 +6918,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d008d
 			public const int checkbox = 2131558541;
 			
-			// aapt resource value: 0x7f0d00f4
-			public const int chronometer = 2131558644;
+			// aapt resource value: 0x7f0d00f6
+			public const int chronometer = 2131558646;
 			
 			// aapt resource value: 0x7f0d0068
 			public const int clip_horizontal = 2131558504;
@@ -6853,8 +6981,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d003f
 			public const int end = 2131558463;
 			
-			// aapt resource value: 0x7f0d00fa
-			public const int end_padder = 2131558650;
+			// aapt resource value: 0x7f0d00fc
+			public const int end_padder = 2131558652;
 			
 			// aapt resource value: 0x7f0d004e
 			public const int enterAlways = 2131558478;
@@ -6910,8 +7038,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0078
 			public const int icon = 2131558520;
 			
-			// aapt resource value: 0x7f0d00f9
-			public const int icon_group = 2131558649;
+			// aapt resource value: 0x7f0d00fb
+			public const int icon_group = 2131558651;
 			
 			// aapt resource value: 0x7f0d0027
 			public const int icon_only = 2131558439;
@@ -6922,8 +7050,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0075
 			public const int image = 2131558517;
 			
-			// aapt resource value: 0x7f0d00f5
-			public const int info = 2131558645;
+			// aapt resource value: 0x7f0d00f7
+			public const int info = 2131558647;
 			
 			// aapt resource value: 0x7f0d006f
 			public const int italic = 2131558511;
@@ -6955,23 +7083,26 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0077
 			public const int list_item = 2131558519;
 			
-			// aapt resource value: 0x7f0d00fb
-			public const int main_appbar = 2131558651;
-			
-			// aapt resource value: 0x7f0d00fe
-			public const int main_scrollview = 2131558654;
+			// aapt resource value: 0x7f0d00ba
+			public const int logTokenButton = 2131558586;
 			
 			// aapt resource value: 0x7f0d00fd
-			public const int main_tablayout = 2131558653;
+			public const int main_appbar = 2131558653;
 			
-			// aapt resource value: 0x7f0d00fc
-			public const int main_toolbar = 2131558652;
+			// aapt resource value: 0x7f0d0100
+			public const int main_scrollview = 2131558656;
 			
-			// aapt resource value: 0x7f0d0105
-			public const int masked = 2131558661;
+			// aapt resource value: 0x7f0d00ff
+			public const int main_tablayout = 2131558655;
 			
-			// aapt resource value: 0x7f0d00ee
-			public const int media_actions = 2131558638;
+			// aapt resource value: 0x7f0d00fe
+			public const int main_toolbar = 2131558654;
+			
+			// aapt resource value: 0x7f0d0107
+			public const int masked = 2131558663;
+			
+			// aapt resource value: 0x7f0d00f0
+			public const int media_actions = 2131558640;
 			
 			// aapt resource value: 0x7f0d00a3
 			public const int message = 2131558563;
@@ -6982,143 +7113,146 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0060
 			public const int mini = 2131558496;
 			
-			// aapt resource value: 0x7f0d00d5
-			public const int mr_art = 2131558613;
-			
-			// aapt resource value: 0x7f0d00c6
-			public const int mr_cast_checkbox = 2131558598;
-			
-			// aapt resource value: 0x7f0d00bf
-			public const int mr_cast_close_button = 2131558591;
-			
-			// aapt resource value: 0x7f0d00ba
-			public const int mr_cast_group_icon = 2131558586;
-			
-			// aapt resource value: 0x7f0d00bb
-			public const int mr_cast_group_name = 2131558587;
-			
-			// aapt resource value: 0x7f0d00b9
-			public const int mr_cast_list = 2131558585;
-			
-			// aapt resource value: 0x7f0d00be
-			public const int mr_cast_meta = 2131558590;
-			
-			// aapt resource value: 0x7f0d00c0
-			public const int mr_cast_meta_art = 2131558592;
-			
-			// aapt resource value: 0x7f0d00c2
-			public const int mr_cast_meta_subtitle = 2131558594;
-			
-			// aapt resource value: 0x7f0d00c1
-			public const int mr_cast_meta_title = 2131558593;
-			
-			// aapt resource value: 0x7f0d00c4
-			public const int mr_cast_route_icon = 2131558596;
-			
-			// aapt resource value: 0x7f0d00c5
-			public const int mr_cast_route_name = 2131558597;
-			
-			// aapt resource value: 0x7f0d00c3
-			public const int mr_cast_stop_button = 2131558595;
-			
-			// aapt resource value: 0x7f0d00c7
-			public const int mr_cast_volume_layout = 2131558599;
+			// aapt resource value: 0x7f0d00d7
+			public const int mr_art = 2131558615;
 			
 			// aapt resource value: 0x7f0d00c8
-			public const int mr_cast_volume_slider = 2131558600;
+			public const int mr_cast_checkbox = 2131558600;
 			
-			// aapt resource value: 0x7f0d00ca
-			public const int mr_chooser_list = 2131558602;
-			
-			// aapt resource value: 0x7f0d00cd
-			public const int mr_chooser_route_desc = 2131558605;
-			
-			// aapt resource value: 0x7f0d00cb
-			public const int mr_chooser_route_icon = 2131558603;
-			
-			// aapt resource value: 0x7f0d00cc
-			public const int mr_chooser_route_name = 2131558604;
-			
-			// aapt resource value: 0x7f0d00c9
-			public const int mr_chooser_title = 2131558601;
-			
-			// aapt resource value: 0x7f0d00d2
-			public const int mr_close = 2131558610;
-			
-			// aapt resource value: 0x7f0d00d8
-			public const int mr_control_divider = 2131558616;
-			
-			// aapt resource value: 0x7f0d00e3
-			public const int mr_control_playback_ctrl = 2131558627;
-			
-			// aapt resource value: 0x7f0d00e6
-			public const int mr_control_subtitle = 2131558630;
-			
-			// aapt resource value: 0x7f0d00e5
-			public const int mr_control_title = 2131558629;
-			
-			// aapt resource value: 0x7f0d00e4
-			public const int mr_control_title_container = 2131558628;
-			
-			// aapt resource value: 0x7f0d00d3
-			public const int mr_custom_control = 2131558611;
-			
-			// aapt resource value: 0x7f0d00d4
-			public const int mr_default_control = 2131558612;
-			
-			// aapt resource value: 0x7f0d00cf
-			public const int mr_dialog_area = 2131558607;
-			
-			// aapt resource value: 0x7f0d00de
-			public const int mr_dialog_header_name = 2131558622;
-			
-			// aapt resource value: 0x7f0d00ce
-			public const int mr_expandable_area = 2131558606;
-			
-			// aapt resource value: 0x7f0d00e7
-			public const int mr_group_expand_collapse = 2131558631;
+			// aapt resource value: 0x7f0d00c1
+			public const int mr_cast_close_button = 2131558593;
 			
 			// aapt resource value: 0x7f0d00bc
-			public const int mr_group_volume_route_name = 2131558588;
+			public const int mr_cast_group_icon = 2131558588;
 			
 			// aapt resource value: 0x7f0d00bd
-			public const int mr_group_volume_slider = 2131558589;
+			public const int mr_cast_group_name = 2131558589;
 			
-			// aapt resource value: 0x7f0d00d6
-			public const int mr_media_main_control = 2131558614;
+			// aapt resource value: 0x7f0d00bb
+			public const int mr_cast_list = 2131558587;
 			
-			// aapt resource value: 0x7f0d00d1
-			public const int mr_name = 2131558609;
+			// aapt resource value: 0x7f0d00c0
+			public const int mr_cast_meta = 2131558592;
 			
-			// aapt resource value: 0x7f0d00df
-			public const int mr_picker_close_button = 2131558623;
+			// aapt resource value: 0x7f0d00c2
+			public const int mr_cast_meta_art = 2131558594;
 			
-			// aapt resource value: 0x7f0d00e0
-			public const int mr_picker_list = 2131558624;
+			// aapt resource value: 0x7f0d00c4
+			public const int mr_cast_meta_subtitle = 2131558596;
 			
-			// aapt resource value: 0x7f0d00e1
-			public const int mr_picker_route_icon = 2131558625;
+			// aapt resource value: 0x7f0d00c3
+			public const int mr_cast_meta_title = 2131558595;
 			
-			// aapt resource value: 0x7f0d00e2
-			public const int mr_picker_route_name = 2131558626;
+			// aapt resource value: 0x7f0d00c6
+			public const int mr_cast_route_icon = 2131558598;
 			
-			// aapt resource value: 0x7f0d00d7
-			public const int mr_playback_control = 2131558615;
+			// aapt resource value: 0x7f0d00c7
+			public const int mr_cast_route_name = 2131558599;
 			
-			// aapt resource value: 0x7f0d00d0
-			public const int mr_title_bar = 2131558608;
+			// aapt resource value: 0x7f0d00c5
+			public const int mr_cast_stop_button = 2131558597;
 			
-			// aapt resource value: 0x7f0d00d9
-			public const int mr_volume_control = 2131558617;
+			// aapt resource value: 0x7f0d00c9
+			public const int mr_cast_volume_layout = 2131558601;
+			
+			// aapt resource value: 0x7f0d00ca
+			public const int mr_cast_volume_slider = 2131558602;
+			
+			// aapt resource value: 0x7f0d00cc
+			public const int mr_chooser_list = 2131558604;
+			
+			// aapt resource value: 0x7f0d00cf
+			public const int mr_chooser_route_desc = 2131558607;
+			
+			// aapt resource value: 0x7f0d00cd
+			public const int mr_chooser_route_icon = 2131558605;
+			
+			// aapt resource value: 0x7f0d00ce
+			public const int mr_chooser_route_name = 2131558606;
+			
+			// aapt resource value: 0x7f0d00cb
+			public const int mr_chooser_title = 2131558603;
+			
+			// aapt resource value: 0x7f0d00d4
+			public const int mr_close = 2131558612;
 			
 			// aapt resource value: 0x7f0d00da
-			public const int mr_volume_group_list = 2131558618;
+			public const int mr_control_divider = 2131558618;
+			
+			// aapt resource value: 0x7f0d00e5
+			public const int mr_control_playback_ctrl = 2131558629;
+			
+			// aapt resource value: 0x7f0d00e8
+			public const int mr_control_subtitle = 2131558632;
+			
+			// aapt resource value: 0x7f0d00e7
+			public const int mr_control_title = 2131558631;
+			
+			// aapt resource value: 0x7f0d00e6
+			public const int mr_control_title_container = 2131558630;
+			
+			// aapt resource value: 0x7f0d00d5
+			public const int mr_custom_control = 2131558613;
+			
+			// aapt resource value: 0x7f0d00d6
+			public const int mr_default_control = 2131558614;
+			
+			// aapt resource value: 0x7f0d00d1
+			public const int mr_dialog_area = 2131558609;
+			
+			// aapt resource value: 0x7f0d00e0
+			public const int mr_dialog_header_name = 2131558624;
+			
+			// aapt resource value: 0x7f0d00d0
+			public const int mr_expandable_area = 2131558608;
+			
+			// aapt resource value: 0x7f0d00e9
+			public const int mr_group_expand_collapse = 2131558633;
+			
+			// aapt resource value: 0x7f0d00be
+			public const int mr_group_volume_route_name = 2131558590;
+			
+			// aapt resource value: 0x7f0d00bf
+			public const int mr_group_volume_slider = 2131558591;
+			
+			// aapt resource value: 0x7f0d00d8
+			public const int mr_media_main_control = 2131558616;
+			
+			// aapt resource value: 0x7f0d00d3
+			public const int mr_name = 2131558611;
+			
+			// aapt resource value: 0x7f0d00e1
+			public const int mr_picker_close_button = 2131558625;
+			
+			// aapt resource value: 0x7f0d00e2
+			public const int mr_picker_list = 2131558626;
+			
+			// aapt resource value: 0x7f0d00e3
+			public const int mr_picker_route_icon = 2131558627;
+			
+			// aapt resource value: 0x7f0d00e4
+			public const int mr_picker_route_name = 2131558628;
+			
+			// aapt resource value: 0x7f0d00d9
+			public const int mr_playback_control = 2131558617;
+			
+			// aapt resource value: 0x7f0d00d2
+			public const int mr_title_bar = 2131558610;
+			
+			// aapt resource value: 0x7f0d00db
+			public const int mr_volume_control = 2131558619;
 			
 			// aapt resource value: 0x7f0d00dc
-			public const int mr_volume_item_icon = 2131558620;
+			public const int mr_volume_group_list = 2131558620;
 			
-			// aapt resource value: 0x7f0d00dd
-			public const int mr_volume_slider = 2131558621;
+			// aapt resource value: 0x7f0d00de
+			public const int mr_volume_item_icon = 2131558622;
+			
+			// aapt resource value: 0x7f0d00df
+			public const int mr_volume_slider = 2131558623;
+			
+			// aapt resource value: 0x7f0d00b9
+			public const int msgText = 2131558585;
 			
 			// aapt resource value: 0x7f0d0014
 			public const int mtrl_child_content_container = 2131558420;
@@ -7141,14 +7275,14 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d002e
 			public const int normal = 2131558446;
 			
-			// aapt resource value: 0x7f0d00f7
-			public const int notification_background = 2131558647;
+			// aapt resource value: 0x7f0d00f9
+			public const int notification_background = 2131558649;
 			
-			// aapt resource value: 0x7f0d00f1
-			public const int notification_main_column = 2131558641;
+			// aapt resource value: 0x7f0d00f3
+			public const int notification_main_column = 2131558643;
 			
-			// aapt resource value: 0x7f0d00f0
-			public const int notification_main_column_container = 2131558640;
+			// aapt resource value: 0x7f0d00f2
+			public const int notification_main_column_container = 2131558642;
 			
 			// aapt resource value: 0x7f0d0067
 			public const int outline = 2131558503;
@@ -7177,11 +7311,11 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d005c
 			public const int right = 2131558492;
 			
-			// aapt resource value: 0x7f0d00f6
-			public const int right_icon = 2131558646;
+			// aapt resource value: 0x7f0d00f8
+			public const int right_icon = 2131558648;
 			
-			// aapt resource value: 0x7f0d00f2
-			public const int right_side = 2131558642;
+			// aapt resource value: 0x7f0d00f4
+			public const int right_side = 2131558644;
 			
 			// aapt resource value: 0x7f0d000c
 			public const int save_image_matrix = 2131558412;
@@ -7246,14 +7380,14 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0056
 			public const int selected = 2131558486;
 			
-			// aapt resource value: 0x7f0d00ff
-			public const int shellcontent_appbar = 2131558655;
-			
 			// aapt resource value: 0x7f0d0101
-			public const int shellcontent_scrollview = 2131558657;
+			public const int shellcontent_appbar = 2131558657;
 			
-			// aapt resource value: 0x7f0d0100
-			public const int shellcontent_toolbar = 2131558656;
+			// aapt resource value: 0x7f0d0103
+			public const int shellcontent_scrollview = 2131558659;
+			
+			// aapt resource value: 0x7f0d0102
+			public const int shellcontent_toolbar = 2131558658;
 			
 			// aapt resource value: 0x7f0d008a
 			public const int shortcut = 2131558538;
@@ -7267,8 +7401,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0034
 			public const int showTitle = 2131558452;
 			
-			// aapt resource value: 0x7f0d0102
-			public const int sliding_tabs = 2131558658;
+			// aapt resource value: 0x7f0d0104
+			public const int sliding_tabs = 2131558660;
 			
 			// aapt resource value: 0x7f0d00ab
 			public const int smallLabel = 2131558571;
@@ -7306,8 +7440,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d005d
 			public const int start = 2131558493;
 			
-			// aapt resource value: 0x7f0d00ed
-			public const int status_bar_latest_event_content = 2131558637;
+			// aapt resource value: 0x7f0d00ef
+			public const int status_bar_latest_event_content = 2131558639;
 			
 			// aapt resource value: 0x7f0d0062
 			public const int stretch = 2131558498;
@@ -7357,8 +7491,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d001a
 			public const int textinput_helper_text = 2131558426;
 			
-			// aapt resource value: 0x7f0d00f3
-			public const int time = 2131558643;
+			// aapt resource value: 0x7f0d00f5
+			public const int time = 2131558645;
 			
 			// aapt resource value: 0x7f0d0023
 			public const int title = 2131558435;
@@ -7369,8 +7503,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d0085
 			public const int title_template = 2131558533;
 			
-			// aapt resource value: 0x7f0d0103
-			public const int toolbar = 2131558659;
+			// aapt resource value: 0x7f0d0105
+			public const int toolbar = 2131558661;
 			
 			// aapt resource value: 0x7f0d004d
 			public const int top = 2131558477;
@@ -7411,11 +7545,11 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0d001b
 			public const int view_offset_helper = 2131558427;
 			
-			// aapt resource value: 0x7f0d0104
-			public const int visible = 2131558660;
+			// aapt resource value: 0x7f0d0106
+			public const int visible = 2131558662;
 			
-			// aapt resource value: 0x7f0d00db
-			public const int volume_item_container = 2131558619;
+			// aapt resource value: 0x7f0d00dd
+			public const int volume_item_container = 2131558621;
 			
 			// aapt resource value: 0x7f0d0029
 			public const int wide = 2131558441;
@@ -7682,121 +7816,124 @@ namespace ClimaTempo.Droid
 			public const int FlyoutContent = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int mr_cast_dialog = 2130968622;
+			public const int Main = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int mr_cast_group_item = 2130968623;
+			public const int mr_cast_dialog = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int mr_cast_group_volume_item = 2130968624;
+			public const int mr_cast_group_item = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int mr_cast_media_metadata = 2130968625;
+			public const int mr_cast_group_volume_item = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int mr_cast_route_item = 2130968626;
+			public const int mr_cast_media_metadata = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int mr_chooser_dialog = 2130968627;
+			public const int mr_cast_route_item = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int mr_chooser_list_item = 2130968628;
+			public const int mr_chooser_dialog = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int mr_controller_material_dialog_b = 2130968629;
+			public const int mr_chooser_list_item = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int mr_controller_volume_item = 2130968630;
+			public const int mr_controller_material_dialog_b = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int mr_dialog_header_item = 2130968631;
+			public const int mr_controller_volume_item = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int mr_picker_dialog = 2130968632;
+			public const int mr_dialog_header_item = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int mr_picker_route_item = 2130968633;
+			public const int mr_picker_dialog = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int mr_playback_control = 2130968634;
+			public const int mr_picker_route_item = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int mr_volume_control = 2130968635;
+			public const int mr_playback_control = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int mtrl_layout_snackbar = 2130968636;
+			public const int mr_volume_control = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int mtrl_layout_snackbar_include = 2130968637;
+			public const int mtrl_layout_snackbar = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int notification_action = 2130968638;
+			public const int mtrl_layout_snackbar_include = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int notification_action_tombstone = 2130968639;
+			public const int notification_action = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int notification_media_action = 2130968640;
+			public const int notification_action_tombstone = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int notification_media_cancel_action = 2130968641;
+			public const int notification_media_action = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int notification_template_big_media = 2130968642;
+			public const int notification_media_cancel_action = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int notification_template_big_media_custom = 2130968643;
+			public const int notification_template_big_media = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int notification_template_big_media_narrow = 2130968644;
+			public const int notification_template_big_media_custom = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int notification_template_big_media_narrow_custom = 2130968645;
+			public const int notification_template_big_media_narrow = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int notification_template_custom_big = 2130968646;
+			public const int notification_template_big_media_narrow_custom = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int notification_template_icon_group = 2130968647;
+			public const int notification_template_custom_big = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int notification_template_lines_media = 2130968648;
+			public const int notification_template_icon_group = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int notification_template_media = 2130968649;
+			public const int notification_template_lines_media = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int notification_template_media_custom = 2130968650;
+			public const int notification_template_media = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int notification_template_part_chronometer = 2130968651;
+			public const int notification_template_media_custom = 2130968651;
 			
 			// aapt resource value: 0x7f04004c
-			public const int notification_template_part_time = 2130968652;
+			public const int notification_template_part_chronometer = 2130968652;
 			
 			// aapt resource value: 0x7f04004d
-			public const int RootLayout = 2130968653;
+			public const int notification_template_part_time = 2130968653;
 			
 			// aapt resource value: 0x7f04004e
-			public const int select_dialog_item_material = 2130968654;
+			public const int RootLayout = 2130968654;
 			
 			// aapt resource value: 0x7f04004f
-			public const int select_dialog_multichoice_material = 2130968655;
+			public const int select_dialog_item_material = 2130968655;
 			
 			// aapt resource value: 0x7f040050
-			public const int select_dialog_singlechoice_material = 2130968656;
+			public const int select_dialog_multichoice_material = 2130968656;
 			
 			// aapt resource value: 0x7f040051
-			public const int ShellContent = 2130968657;
+			public const int select_dialog_singlechoice_material = 2130968657;
 			
 			// aapt resource value: 0x7f040052
-			public const int support_simple_spinner_dropdown_item = 2130968658;
+			public const int ShellContent = 2130968658;
 			
 			// aapt resource value: 0x7f040053
-			public const int Tabbar = 2130968659;
+			public const int support_simple_spinner_dropdown_item = 2130968659;
 			
 			// aapt resource value: 0x7f040054
-			public const int Toolbar = 2130968660;
+			public const int Tabbar = 2130968660;
+			
+			// aapt resource value: 0x7f040055
+			public const int Toolbar = 2130968661;
 			
 			static Layout()
 			{
@@ -8010,6 +8147,9 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0a0011
 			public const int common_signin_button_text_long = 2131361809;
 			
+			// aapt resource value: 0x7f0a0064
+			public const int default_web_client_id = 2131361892;
+			
 			// aapt resource value: 0x7f0a0057
 			public const int fab_transformation_scrim_behavior = 2131361879;
 			
@@ -8019,17 +8159,29 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0a0012
 			public const int fcm_fallback_notification_channel_label = 2131361810;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int firebase_database_url = 2131361890;
+			// aapt resource value: 0x7f0a0065
+			public const int firebase_database_url = 2131361893;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int gcm_defaultSenderId = 2131361889;
+			// aapt resource value: 0x7f0a0062
+			public const int gcm_defaultSenderId = 2131361890;
+			
+			// aapt resource value: 0x7f0a0066
+			public const int google_api_key = 2131361894;
 			
 			// aapt resource value: 0x7f0a0063
-			public const int google_storage_bucket = 2131361891;
+			public const int google_app_id = 2131361891;
+			
+			// aapt resource value: 0x7f0a0067
+			public const int google_crash_reporting_api_key = 2131361895;
+			
+			// aapt resource value: 0x7f0a0068
+			public const int google_storage_bucket = 2131361896;
 			
 			// aapt resource value: 0x7f0a0059
 			public const int hide_bottom_view_on_scroll_behavior = 2131361881;
+			
+			// aapt resource value: 0x7f0a0061
+			public const int library_name = 2131361889;
 			
 			// aapt resource value: 0x7f0a0013
 			public const int mr_button_content_description = 2131361811;
@@ -8121,8 +8273,8 @@ namespace ClimaTempo.Droid
 			// aapt resource value: 0x7f0a005f
 			public const int path_password_strike_through = 2131361887;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int project_id = 2131361892;
+			// aapt resource value: 0x7f0a0069
+			public const int project_id = 2131361897;
 			
 			// aapt resource value: 0x7f0a0046
 			public const int search_menu_title = 2131361862;

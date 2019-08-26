@@ -1,9 +1,10 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Push;
 using Prism;
 using Prism.Ioc;
-using Android.Gms.Common;
 
 namespace ClimaTempo.Droid
 {
@@ -15,20 +16,18 @@ namespace ClimaTempo.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-
-
             base.OnCreate(bundle);
 
             Xamarin.Essentials.Platform.Init(this, bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            AppCenter.Start("60bc56f7-315b-43b5-94fc-bad53e105013", typeof(Push));
             LoadApplication(new App(new AndroidInitializer()));
-        }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            AppCenter.GetInstallIdAsync().ContinueWith(installId =>
+            {
+                System.Diagnostics.Debug.WriteLine($"VS App Center InstallId={installId.Result}");
+            });
         }
     }
 

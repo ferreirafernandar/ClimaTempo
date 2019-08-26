@@ -19,12 +19,11 @@ namespace FunctionClimaTempo
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
             var firebaseService = new FirebaseService();
+            var appCenterService = new AppCenterService(new HttpClient());
 
             var openWeatherService = new OpenWeatherService(new HttpClient());
 
             var notificacoes = await firebaseService.ObterNotificacoes();
-
-            var stringBuilder = new StringBuilder();
 
             foreach (var notificacao in notificacoes)
             {
@@ -32,18 +31,22 @@ namespace FunctionClimaTempo
 
                if (notificacao.DeveNotificarTemperaturaMinima(cidade.Principal.TemperaturaMinima))
                {
-                   stringBuilder.AppendLine(
+                   await appCenterService.AdicionarNotificacao(
+                       new[] {Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0")}, "ClimaTempo",
+                       "A temperatura caiu!",
                        $"Cidade {notificacao.Cidade} com temperatura atual {cidade.Principal.TemperaturaMinima} menor que {notificacao.TemperaturaMinima}");
                }
 
                if (notificacao.DeveNotificarVentoVelocidadeMinima(Convert.ToDouble(cidade.Vento.Velocidade)))
                {
-                   stringBuilder.AppendLine(
+                   await appCenterService.AdicionarNotificacao(
+                       new[] {Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0")}, "ClimaTempo",
+                       "A velocidade do vendo caiu!",
                        $"Cidade {notificacao.Cidade} com velocidade atual do vendo {cidade.Vento.Velocidade} menor que {notificacao.VentoMinimo}");
                }
             }
 
-            return new OkObjectResult(stringBuilder.ToString());
+            return new OkObjectResult("OK");
         }
     }
 }
