@@ -1,19 +1,15 @@
 using ClimaTempo.Services;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using System;
-
+using System.Threading.Tasks;
 namespace FunctionClimaTempo
 {
     public static class FunctionNotificacaoClimaTempo
     {
 
         [FunctionName("NotificacoesClimaTempo")]
-        //public static async System.Threading.Tasks.Task Run([TimerTrigger("0 00 6 * * *")]TimerInfo myTimer, ILogger log)
-        public static async System.Threading.Tasks.Task<IActionResult> Run([HttpTrigger]HttpRequest req, ILogger log)
-
+        public static async Task Run([TimerTrigger("0 00 6 * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
@@ -44,8 +40,6 @@ namespace FunctionClimaTempo
                         $"Cidade de {notificacao.Cidade} com velocidade atual do vendo em {cidade.Vento.Velocidade}.");
                 }
             }
-
-            return new OkObjectResult("OK");
         }
     }
 }
