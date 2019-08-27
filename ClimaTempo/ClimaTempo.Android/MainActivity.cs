@@ -21,13 +21,10 @@ namespace ClimaTempo.Droid
             Xamarin.Essentials.Platform.Init(this, bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            AppCenter.Start("60bc56f7-315b-43b5-94fc-bad53e105013", typeof(Push));
-            LoadApplication(new App(new AndroidInitializer()));
 
-            AppCenter.GetInstallIdAsync().ContinueWith(installId =>
-            {
-                System.Diagnostics.Debug.WriteLine($"VS App Center InstallId={installId.Result}");
-            });
+            AppCenter.Start("60bc56f7-315b-43b5-94fc-bad53e105013", typeof(Push));
+
+            LoadApplication(new App(new AndroidInitializer()));
         }
     }
 

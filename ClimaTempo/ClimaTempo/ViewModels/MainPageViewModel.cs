@@ -4,6 +4,7 @@ using ClimaTempo.Models.Battuta;
 using ClimaTempo.Services.Interfaces;
 using Prism.Commands;
 using Prism.Navigation;
+using Prism.Services;
 
 namespace ClimaTempo.ViewModels
 {
@@ -11,10 +12,15 @@ namespace ClimaTempo.ViewModels
     {
         private readonly IBattutaService _battutaService;
         protected readonly INavigationService _navigationService;
-        public MainPageViewModel(INavigationService navigationService, IBattutaService battutaService) : base(navigationService)
+        private readonly IOpenWeatherService _openWeatherService;
+        private readonly IPageDialogService _pageDialogService;
+
+        public MainPageViewModel(INavigationService navigationService, IBattutaService battutaService, IOpenWeatherService openWeatherService, IPageDialogService pageDialogService) : base(navigationService)
         {
             _navigationService = navigationService;
             _battutaService = battutaService;
+            _openWeatherService = openWeatherService;
+            _pageDialogService = pageDialogService;
             Title = "Busca";
 
             Paises = new ObservableCollection<Pais>();
@@ -76,14 +82,19 @@ namespace ClimaTempo.ViewModels
 
         private async Task IrParaConfiguracoes()
         {
-            var navigationParameters = new NavigationParameters
+            if (_openWeatherService.ObterClimaTempo(CidadeSelecionada.NomeCidade).Exception?.Message == null)
             {
+                var navigationParameters = new NavigationParameters
                 {
-                    "Cidade", CidadeSelecionada.NomeCidade
-                }
-            };
+                    {
+                        "Cidade", CidadeSelecionada.NomeCidade
+                    }
+                };
 
-            await _navigationService.NavigateAsync("ConfiguracoesPage", navigationParameters);
+                await _navigationService.NavigateAsync("ConfiguracoesPage", navigationParameters);
+            }
+            else
+                await _pageDialogService.DisplayAlertAsync("Informação", "Cidade não encontrada", "OK");
         }
 
         #endregion

@@ -9,7 +9,6 @@ namespace ClimaTempo.Services
     public class AppCenterService : IAppCenterService
     {
         private readonly IHttpClient _httpClient;
-        private static Task<EnviarNotificacao> _enviarNotificacao;
 
         public AppCenterService(IHttpClient httpClient)
         {
@@ -37,9 +36,7 @@ namespace ClimaTempo.Services
                 }
             };
 
-            _enviarNotificacao = AdicionarBaseHttpClient<EnviarNotificacao>("v0.1/apps/ferreirafernandar/ClimaTempo/push/notifications", adicionarNotificacao);
-
-            return _enviarNotificacao;
+            return AdicionarBaseHttpClient<EnviarNotificacao>("v0.1/apps/ferreirafernandar/ClimaTempo/push/notifications", adicionarNotificacao);
         }
     }
 }

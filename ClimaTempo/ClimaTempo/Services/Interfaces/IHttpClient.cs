@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using ClimaTempo.Models.AppCenter;
+﻿using System.Threading.Tasks;
 
 namespace ClimaTempo.Services.Interfaces
 {

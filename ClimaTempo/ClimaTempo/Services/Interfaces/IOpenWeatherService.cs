@@ -6,7 +6,5 @@ namespace ClimaTempo.Services.Interfaces
     public interface IOpenWeatherService
     {
         Task<ClimaAtual> ObterClimaTempo(string cidade);
-        void GerarIdDispositivo();
-        Task<string> ObterIdDispositivo();
     }
 }

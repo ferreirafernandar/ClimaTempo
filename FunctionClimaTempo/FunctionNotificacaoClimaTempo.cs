@@ -31,7 +31,7 @@ namespace FunctionClimaTempo
                 if (notificacao.DeveNotificarTemperaturaMinima(cidade.Principal.TemperaturaMinima))
                 {
                     await appCenterService.AdicionarNotificacao(
-                        new[] { Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0"), Guid.Parse("16e79b8b-01f4-4711-bd12-87a383e917dd") }, "ClimaTempo",
+                        new[] { notificacao.IdDispositivo }, "ClimaTempo",
                         "A temperatura caiu!",
                         $"Cidade de {notificacao.Cidade} com temperatura atual de {cidade.Principal.TemperaturaMinima}°.");
                 }

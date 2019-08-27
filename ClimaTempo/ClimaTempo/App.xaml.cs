@@ -2,6 +2,9 @@
 using ClimaTempo.Services.Interfaces;
 using ClimaTempo.ViewModels;
 using ClimaTempo.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Prism;
 using Prism.Ioc;
 using Xamarin.Forms;
@@ -29,9 +32,11 @@ namespace ClimaTempo
 
             //Enable HotReloader
 #if DEBUG
-            HotReloader.Current.Run(this);    
+            HotReloader.Current.Run(this);
 #endif
-            
+            AppCenter.Start("60bc56f7-315b-43b5-94fc-bad53e105013",
+                typeof(Analytics), typeof(Crashes));
+
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
 

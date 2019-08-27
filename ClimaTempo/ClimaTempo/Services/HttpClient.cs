@@ -7,7 +7,6 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
-using ClimaTempo.Models.AppCenter;
 
 namespace ClimaTempo.Services
 {
@@ -35,7 +34,10 @@ namespace ClimaTempo.Services
             }
         }
 
-        public async Task<T> AdicionarBaseHttpClient<T>(string url, string endpoint, object model, string key)
+        public async Task<T> AdicionarBaseHttpClient<T>(string url, 
+            string endpoint, 
+            object model, 
+            string key)
         {
             using (var response = new System.Net.Http.HttpClient())
             {
@@ -49,28 +51,12 @@ namespace ClimaTempo.Services
             }
         }
 
-
-        //private static T ProcessarRetorno<T>(HttpResponseMessage message)
-        //{
-        //    var result = message.Content.ReadAsStringAsync().Result;
-
-        //    if (message.IsSuccessStatusCode)
-        //        return JsonConvert.DeserializeObject<T>(result);
-
-        //    if (message.StatusCode == HttpStatusCode.InternalServerError)
-        //        return //ValidationBase.CreateErrorReturn<T>("01 - Erro interno no servidor de pagamentos.");
-
-        //    var validacao = JsonConvert.DeserializeObject<T>(result);
-
-        //    if (validacao?.Validacao?.Erros != null && validacao.Validacao.Erros.Any())
-        //        return validacao;
-
-        //    var erros = JsonConvert.DeserializeObject<Error>(result);
-
-        //    return erros?.ModelState?.Erros != null ? ValidationBase.CreateErrorReturn<T>(erros.ModelState.Erros) : ValidationBase.CreateErrorReturn<T>("01 - Erro interno no servidor de pagamentos.");
-        //}
-
-        public HttpRequestMessage MontarRequest(string url, string endpoint, HttpMethod method, string key, object content = null, string mediaType = "application/json")
+        public HttpRequestMessage MontarRequest(string url, 
+            string endpoint, 
+            HttpMethod method, 
+            string key, 
+            object content = null, 
+            string mediaType = "application/json")
         {
             var request = new HttpRequestMessage
             {

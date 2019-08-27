@@ -1,10 +1,11 @@
 ﻿using ClimaTempo.Models;
 using ClimaTempo.Models.OpenWeather;
 using ClimaTempo.Services.Interfaces;
+using Microsoft.AppCenter;
 using Prism.Commands;
 using Prism.Navigation;
-using System.Threading.Tasks;
 using Prism.Services;
+using System.Threading.Tasks;
 
 namespace ClimaTempo.ViewModels
 {
@@ -91,7 +92,7 @@ namespace ClimaTempo.ViewModels
         {
             var notificacao = new Notificacao
             {
-                IdDispositivo = _openWeatherService.ObterIdDispositivo().Result,
+                IdDispositivo = AppCenter.GetInstallIdAsync().Result.GetValueOrDefault(),
                 Chuva = Chuva,
                 Cidade = ClimaAtual.Nome,
                 TemperaturaMinima = ValorTemperaturaMinima,
@@ -107,7 +108,6 @@ namespace ClimaTempo.ViewModels
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
             await ObterClimaTempo(parameters.GetValue<string>("Cidade"));
-            _openWeatherService.GerarIdDispositivo();
         }
     }
 }

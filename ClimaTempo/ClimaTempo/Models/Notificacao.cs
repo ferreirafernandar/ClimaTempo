@@ -1,8 +1,10 @@
-﻿namespace ClimaTempo.Models
+﻿using System;
+
+namespace ClimaTempo.Models
 {
     public class Notificacao
     {
-        public string IdDispositivo { get; set; }
+        public Guid IdDispositivo { get; set; }
         public string Cidade { get; set; }
         public double TemperaturaMinima { get; set; }
         public double VentoMinimo { get; set; }
