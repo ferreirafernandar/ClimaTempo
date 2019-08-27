@@ -26,23 +26,23 @@ namespace FunctionClimaTempo
 
             foreach (var notificacao in notificacoes)
             {
-               var cidade = await openWeatherService.ObterClimaTempo(notificacao.Cidade);
+                var cidade = await openWeatherService.ObterClimaTempo(notificacao.Cidade);
 
-               if (notificacao.DeveNotificarTemperaturaMinima(cidade.Principal.TemperaturaMinima))
-               {
-                   await appCenterService.AdicionarNotificacao(
-                       new[] {Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0")}, "ClimaTempo",
-                       "A temperatura caiu!",
-                       $"Cidade {notificacao.Cidade} com temperatura atual {cidade.Principal.TemperaturaMinima} menor que {notificacao.TemperaturaMinima}");
-               }
+                if (notificacao.DeveNotificarTemperaturaMinima(cidade.Principal.TemperaturaMinima))
+                {
+                    await appCenterService.AdicionarNotificacao(
+                        new[] { Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0"), Guid.Parse("16e79b8b-01f4-4711-bd12-87a383e917dd") }, "ClimaTempo",
+                        "A temperatura caiu!",
+                        $"Cidade de {notificacao.Cidade} com temperatura atual de {cidade.Principal.TemperaturaMinima}°.");
+                }
 
-               if (notificacao.DeveNotificarVentoVelocidadeMinima(Convert.ToDouble(cidade.Vento.Velocidade)))
-               {
-                   await appCenterService.AdicionarNotificacao(
-                       new[] {Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0")}, "ClimaTempo",
-                       "A velocidade do vendo caiu!",
-                       $"Cidade {notificacao.Cidade} com velocidade atual do vendo {cidade.Vento.Velocidade} menor que {notificacao.VentoMinimo}");
-               }
+                if (notificacao.DeveNotificarVentoVelocidadeMinima(Convert.ToDouble(cidade.Vento.Velocidade)))
+                {
+                    await appCenterService.AdicionarNotificacao(
+                        new[] { Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0") }, "ClimaTempo",
+                        "A velocidade do vendo caiu!",
+                        $"Cidade de {notificacao.Cidade} com velocidade atual do vendo em {cidade.Vento.Velocidade}.");
+                }
             }
 
             return new OkObjectResult("OK");

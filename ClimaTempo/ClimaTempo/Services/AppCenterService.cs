@@ -9,19 +9,19 @@ namespace ClimaTempo.Services
     public class AppCenterService : IAppCenterService
     {
         private readonly IHttpClient _httpClient;
-        private static Task<Uri> _enviarNotificacao;
+        private static Task<EnviarNotificacao> _enviarNotificacao;
 
         public AppCenterService(IHttpClient httpClient)
         {
             _httpClient = httpClient;
         }
 
-        public Task<Uri> AdicionarBaseHttpClient<T>(string endpoint, object model)
+        public Task<T> AdicionarBaseHttpClient<T>(string endpoint, object model)
         {
             return _httpClient.AdicionarBaseHttpClient<T>(Configuracoes.UrlBaseAppCenter, endpoint, model, Configuracoes.AppCenterKey);
         }
 
-        public Task<Uri> AdicionarNotificacao(Guid[] devices, string nome, string titulo, string conteudo)
+        public Task<EnviarNotificacao> AdicionarNotificacao(Guid[] devices, string nome, string titulo, string conteudo)
         {
             var adicionarNotificacao = new EnviarNotificacao
             {

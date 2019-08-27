@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using ClimaTempo.Models.AppCenter;
 
 namespace ClimaTempo.Services.Interfaces
 {
@@ -7,6 +8,6 @@ namespace ClimaTempo.Services.Interfaces
     {
         Task<T> ObterBaseHttpClient<T>(string url, string endpoint, params string[] parameters);
 
-        Task<Uri> AdicionarBaseHttpClient<T>(string url, string endpoint, object model, string key);
+        Task<T> AdicionarBaseHttpClient<T>(string url, string endpoint, object model, string key);
     }
 }
