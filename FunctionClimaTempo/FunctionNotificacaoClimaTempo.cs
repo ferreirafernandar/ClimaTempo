@@ -39,7 +39,7 @@ namespace FunctionClimaTempo
                 if (notificacao.DeveNotificarVentoVelocidadeMinima(Convert.ToDouble(cidade.Vento.Velocidade)))
                 {
                     await appCenterService.AdicionarNotificacao(
-                        new[] { Guid.Parse("b4bfe9a8-3762-4cb3-917c-f086620205a0") }, "ClimaTempo",
+                        new[] { notificacao.IdDispositivo }, "ClimaTempo",
                         "A velocidade do vendo caiu!",
                         $"Cidade de {notificacao.Cidade} com velocidade atual do vendo em {cidade.Vento.Velocidade}.");
                 }

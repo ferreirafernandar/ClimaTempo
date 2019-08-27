@@ -24,12 +24,12 @@
                 WidthRequest="218"
                 SelectedItem="{Binding PaisSelecionado}"
                 ItemDisplayBinding="{Binding NomePais}"
-                FontSize="Small">
+                FontSize="Small"
+                x:Name="pais">
                 <Picker.Behaviors>
                     <behaviors:EventToCommandBehavior
                     Command="{Binding AtualizarListaEstadosCommand}"
-                    CommandParameter="{Binding PaisSelecionado}"
-                    EventName="SelectedIndexChanged" />
+                    EventName="SelectedIndexChanged"/>
                 </Picker.Behaviors>
             </Picker>
 
@@ -40,12 +40,12 @@
                 WidthRequest="218"
                 SelectedItem="{Binding EstadoSelecionado}"
                 ItemDisplayBinding="{Binding NomeEstado}"
-                FontSize="Small">
+                FontSize="Small"
+                x:Name="estado">
                 <Picker.Behaviors>
                     <behaviors:EventToCommandBehavior
                     Command="{Binding AtualizarListaCidadesCommand}"
-                    CommandParameter="{Binding EstadoSelecionado}"
-                    EventName="SelectedIndexChanged" />
+                    EventName="SelectedIndexChanged"/>
                 </Picker.Behaviors>
             </Picker>
 
@@ -56,20 +56,16 @@
                 WidthRequest="218"
                 SelectedItem="{Binding CidadeSelecionada}"
                 ItemDisplayBinding="{Binding NomeCidade}"
-                FontSize="Small">
-                <Picker.Behaviors>
-                    <behaviors:EventToCommandBehavior
-                    Command="{Binding ConfiguracoesCommand}"
-                    CommandParameter="{Binding CidadeSelecionada}"
-                    EventName="SelectedIndexChanged" />
-                </Picker.Behaviors>
+                FontSize="Small"
+                x:Name="cidade">
             </Picker>
 
             <Button 
                 Text="Ir para configurações" 
                 Command="{Binding IrParaConfiguracoesCommand}"
                 HorizontalOptions="FillAndExpand" 
-                VerticalOptions="EndAndExpand"/>
+                VerticalOptions="EndAndExpand">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,10 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using ClimaTempo.Models.Battuta;
+﻿using ClimaTempo.Models.Battuta;
 using ClimaTempo.Services.Interfaces;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace ClimaTempo.ViewModels
 {
@@ -29,7 +29,7 @@ namespace ClimaTempo.ViewModels
 
             AtualizarListaEstadosCommand = new DelegateCommand(async () => await PreencherEstados());
             AtualizarListaCidadesCommand = new DelegateCommand(async () => await PreencherCidades());
-            IrParaConfiguracoesCommand = new DelegateCommand(async () => await IrParaConfiguracoes());
+            IrParaConfiguracoesCommand = new DelegateCommand(async () => await IrParaConfiguracoes(), PodeExecutarIrParaConfiguracoesCommand);
         }
 
         #region Observables
@@ -48,13 +48,18 @@ namespace ClimaTempo.ViewModels
 
         #endregion
 
-        #region Métodos Comandos 
+        #region Métodos de Comando
+
+        bool PodeExecutarIrParaConfiguracoesCommand()
+        {
+            return PaisSelecionado != null && EstadoSelecionado != null && CidadeSelecionada != null;
+        }
 
         private async Task PreencherPaises()
         {
             var paises = await _battutaService.ObterPaises();
 
-            Paises.Clear();
+            //Paises.Clear();
 
             foreach (var pais in paises)
                 Paises.Add(pais);
@@ -94,7 +99,7 @@ namespace ClimaTempo.ViewModels
                 await _navigationService.NavigateAsync("ConfiguracoesPage", navigationParameters);
             }
             else
-                await _pageDialogService.DisplayAlertAsync("Informação", "Cidade não encontrada", "OK");
+                await _pageDialogService.DisplayAlertAsync("Oops", "Cidade não encontrada", "OK");
         }
 
         #endregion
@@ -105,28 +110,42 @@ namespace ClimaTempo.ViewModels
         public Pais PaisSelecionado
         {
             get => _paisSelecionado;
-            set => SetProperty(ref _paisSelecionado, value);
+            set
+            {
+                SetProperty(ref _paisSelecionado, value);
+                IrParaConfiguracoesCommand.RaiseCanExecuteChanged();
+            }
         }
 
         private Estado _estadoSelecionado;
         public Estado EstadoSelecionado
         {
             get => _estadoSelecionado;
-            set => SetProperty(ref _estadoSelecionado, value);
+            set
+            {
+                SetProperty(ref _estadoSelecionado, value);
+                IrParaConfiguracoesCommand.RaiseCanExecuteChanged();
+            }
         }
 
         private Cidade _cidadeSelecionada;
         public Cidade CidadeSelecionada
         {
             get => _cidadeSelecionada;
-            set => SetProperty(ref _cidadeSelecionada, value);
+            set
+            {
+                SetProperty(ref _cidadeSelecionada, value);
+                IrParaConfiguracoesCommand.RaiseCanExecuteChanged();
+            }
         }
 
         #endregion
 
+        #region Overrides
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
             await PreencherPaises();
         }
+        #endregion
     }
 }

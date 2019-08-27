@@ -2,6 +2,7 @@
 using Android.Content.PM;
 using Android.OS;
 using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Push;
 using Prism;
 using Prism.Ioc;
@@ -18,11 +19,9 @@ namespace ClimaTempo.Droid
 
             base.OnCreate(bundle);
 
-            Xamarin.Essentials.Platform.Init(this, bundle);
-
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            AppCenter.Start("60bc56f7-315b-43b5-94fc-bad53e105013", typeof(Push));
+            AppCenter.Start("60bc56f7-315b-43b5-94fc-bad53e105013", typeof(Push), typeof(Analytics));
 
             LoadApplication(new App(new AndroidInitializer()));
         }

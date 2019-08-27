@@ -28,7 +28,7 @@ namespace ClimaTempo.ViewModels
 
             Title = "Configurações";
 
-            SalvarConfiguracoesCommand = new DelegateCommand(async () => await SalvarConfiguracoes());
+            SalvarConfiguracoesCommand = new DelegateCommand(async () => await SalvarConfiguracoes(), PodeExecutarSalvarConfiguracoesCommand);
         }
 
         #region Propriedades
@@ -51,21 +51,33 @@ namespace ClimaTempo.ViewModels
         public bool Chuva
         {
             get => _chuva;
-            set => SetProperty(ref _chuva, value);
+            set
+            {
+                SetProperty(ref _chuva, value);
+                SalvarConfiguracoesCommand.RaiseCanExecuteChanged();
+            }
         }
 
         private double _valorTemperaturaMinima;
         public double ValorTemperaturaMinima
         {
             get => _valorTemperaturaMinima;
-            set => SetProperty(ref _valorTemperaturaMinima, value);
+            set
+            {
+                SetProperty(ref _valorTemperaturaMinima, value);
+                SalvarConfiguracoesCommand.RaiseCanExecuteChanged();
+            }
         }
 
         private double _valorVentoMinimo;
         public double ValorVentoMinimo
         {
             get => _valorVentoMinimo;
-            set => SetProperty(ref _valorVentoMinimo, value);
+            set
+            {
+                SetProperty(ref _valorVentoMinimo, value);
+                SalvarConfiguracoesCommand.RaiseCanExecuteChanged();
+            }
         }
 
         #endregion
@@ -81,6 +93,13 @@ namespace ClimaTempo.ViewModels
         public ClimaAtual ClimaAtual { get; set; }
 
         #endregion
+
+        #region Métodos de Comando
+
+        bool PodeExecutarSalvarConfiguracoesCommand()
+        {
+            return ValorTemperaturaMinima > 0 || Chuva || ValorVentoMinimo > 0;
+        }
 
         private async Task ObterClimaTempo(string cidade)
         {
@@ -105,9 +124,15 @@ namespace ClimaTempo.ViewModels
                 await _pageDialogService.DisplayAlertAsync("Sucesso", "Configuração salva com sucesso", "OK");
         }
 
+        #endregion
+
+        #region Overrides
+
         public override async void OnNavigatedTo(INavigationParameters parameters)
         {
             await ObterClimaTempo(parameters.GetValue<string>("Cidade"));
         }
+
+        #endregion
     }
 }

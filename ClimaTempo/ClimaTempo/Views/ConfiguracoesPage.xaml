@@ -133,7 +133,8 @@
                 Text="Salvar" 
                 Command="{Binding SalvarConfiguracoesCommand}"
                 HorizontalOptions="FillAndExpand" 
-                VerticalOptions="EndAndExpand"/>
+                VerticalOptions="EndAndExpand"
+                IsEnabled="False"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

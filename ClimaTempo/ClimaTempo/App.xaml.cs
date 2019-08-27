@@ -34,7 +34,13 @@ namespace ClimaTempo
 #if DEBUG
             HotReloader.Current.Run(this);
 #endif
-            AppCenter.Start("60bc56f7-315b-43b5-94fc-bad53e105013",
+
+            //AppCenter.Start("android=60bc56f7-315b-43b5-94fc-bad53e105013;" +
+            //                "uwp={Your UWP App secret here};" +
+            //                "ios={Your iOS App secret here}",
+            //    typeof(Analytics), typeof(Crashes)); 
+
+            AppCenter.Start("android=60bc56f7-315b-43b5-94fc-bad53e105013;",
                 typeof(Analytics), typeof(Crashes));
 
             await NavigationService.NavigateAsync("NavigationPage/MainPage");

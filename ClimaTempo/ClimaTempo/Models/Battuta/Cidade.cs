@@ -2,7 +2,7 @@
 
 namespace ClimaTempo.Models.Battuta
 {
-    public class Cidade
+    public class Cidade 
     {
         [JsonProperty("City")]
         public string NomeCidade { get; set; }
