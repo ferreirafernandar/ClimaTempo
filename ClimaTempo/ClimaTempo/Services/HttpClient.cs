@@ -25,12 +25,12 @@ namespace ClimaTempo.Services
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 var response = client.GetAsync($"{url}/{endpoint}{(parameters != null && parameters.Length > 0 ? "?" + string.Join("&", parameters) : string.Empty)}").Result;
-                var result = response.Content.ReadAsStringAsync().Result;
+                var resultado = response.Content.ReadAsStringAsync().Result;
 
                 if (response.IsSuccessStatusCode)
-                    return JsonConvert.DeserializeObject<T>(result);
+                    return JsonConvert.DeserializeObject<T>(resultado);
 
-                throw new WebException(result);
+                throw new WebException(resultado);
             }
         }
 
@@ -43,11 +43,11 @@ namespace ClimaTempo.Services
             {
                 var request = MontarRequest(url, endpoint, HttpMethod.Post, key, model);
 
-                var ret = response.SendAsync(request, CancellationToken.None).Result;
+                var retorno = response.SendAsync(request, CancellationToken.None).Result;
 
-                var result = ret.Content.ReadAsStringAsync().Result;
+                var resultado = retorno.Content.ReadAsStringAsync().Result;
 
-                return JsonConvert.DeserializeObject<T>(result);
+                return JsonConvert.DeserializeObject<T>(resultado);
             }
         }
 
